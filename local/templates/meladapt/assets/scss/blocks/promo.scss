@@ -1,0 +1,79 @@
+.promo  {
+    transform: translateY(-80px);
+    padding-top: 100px;
+    padding-bottom: 75px;
+    background-color: #132434;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    &__bg {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        right: 0;
+        background: linear-gradient(180deg, #142534 0%, rgba(20, 37, 52, 0) 6.77%), linear-gradient(360deg, #132434 17.6%, rgba(19, 36, 52, 0) 63.05%), linear-gradient(90deg, #132434 0%, rgba(19, 36, 52, 0) 35.45%);
+        img {
+            height: 100%;
+        }
+    }
+    &__head {
+        margin-bottom: 25px;
+        max-width: 580px;
+        color: #FFFFFF;
+        h1 {
+            font-family: 'Amatic SC', cursive;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 120px;
+            line-height: 90%;
+        }
+        span {
+            color: $c-orange;
+        }
+    }
+    &__subtitle {
+        color: #FFFFFF;
+    }
+    &__product {
+        max-width: 580px;
+    }
+    &__feat {
+        display: flex;
+        margin-bottom: 70px;
+    }
+    &__bottom {
+        display: flex;
+        align-items: center;
+    }
+    &__instr {
+        display: flex;
+        .link {
+            font-weight: 800;
+            line-height: 100%;
+            text-align: center;
+            margin-right: 4px;
+            color: #FFFFFF;
+            text-decoration: white dashed;
+        }
+        .icon {
+            width: 15px;
+            height: 15px;
+            fill: white;
+            margin-right: 4px;
+        }
+    }
+    &__btn {
+        margin-right: 35px;
+    }
+}
+
+.fadeIn {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

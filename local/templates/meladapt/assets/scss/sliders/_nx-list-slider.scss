@@ -1,0 +1,92 @@
+$list-slider: (
+        icon-fz: 30px,
+        icon-w: 30px,
+        icon-h: 30px,
+);
+.nx-list-slider{
+    position: relative;
+
+    &__slider{
+        overflow: hidden;
+        .nx-listing__item{
+            margin-bottom: 0;
+        }
+        .nx-listing__head {
+            padding-bottom: 99%;
+            border: none;
+            margin-bottom: 20px;
+        }
+        .nx-listing__title {
+            font-size: $fz-main;
+            font-weight: 400;
+        }
+        &.nx-listing{
+            margin-bottom: 0;
+        }
+    }
+
+    &__prev, &__next{
+        position: absolute;
+        top: 35%;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        fill: black;
+        transition: all $tr-time $tr-type;
+        cursor: pointer;
+        z-index: 10;
+        border-radius: 50%;
+        &-icon{
+            @extend %centered-absolute;
+            display: block;
+            font-size: map_get($list-slider, icon-fz);
+            line-height: 1;
+            width: map_get($list-slider, icon-w);
+            height: map_get($list-slider, icon-h);
+        }
+        &:hover{
+            opacity: .8;
+        }
+        &.swiper-button-disabled{
+            &, &:hover{
+                opacity: .1;
+                cursor: default;
+            }
+        }
+    }
+    &__prev{
+        left: -50px;
+    }
+    &__next{
+        right: -50px;
+        transform: scaleX(-1);
+    }
+    &_center {
+        .nx-list-slider__prev,
+        .nx-list-slider__next {
+            top: 25%;
+        }
+    }
+    @include media('sm-max'){
+        &__prev, &__next{
+            top: 23%;
+        }
+        &__prev{
+            left: -20px;
+        }
+        &__next{
+            right: -20px;
+        }
+    }
+    @include media('xs'){
+        &__prev, &__next{
+            top: 27%;
+        }
+        &__prev{
+            left: -15px;
+        }
+        &__next{
+            right: -15px;
+        }
+    }
+}

@@ -1,0 +1,121 @@
+.irs--dnext {
+    $name: irs;
+
+    $top: 6px;
+    $bottom: auto;
+    $line_height: 2px;
+    $handle_width: 13px;
+    $handle_height: 13px;
+    $custom_radius: $brd-rad-box;
+
+    $line_color: rgba(black, .2);
+    $bar_color: $c-dark;
+    $handle_color_1: $c-dark;
+    $handle_color_2: $c-dark;
+    $minmax_text_color: rgba(black, .2);
+    $minmax_bg_color: rgba(black, .2);
+    $label_color_1: $c-dark;
+    $label_color_2: black;
+    $grid_color_1: rgba(black, .2);
+    $grid_color_2: rgba(black, .2);
+
+
+
+    height: 20px;
+
+    &.irs-with-grid {
+        height: 20px;
+    }
+
+    .#{$name}-line {
+        top: $top;
+        height: $line_height;
+        background-color: $line_color;
+        border-radius: $custom_radius;
+    }
+
+    .#{$name}-bar {
+        top: $top;
+        height: $line_height;
+        background-color: $bar_color;
+
+        &--single {
+            border-radius: $custom_radius 0 0 $custom_radius;
+        }
+    }
+
+    .#{$name}-shadow {
+        height: 1px;
+        bottom: $bottom;
+        background-color: $line_color;
+    }
+
+    .#{$name}-handle {
+        top: 0;
+        width: $handle_width;
+        height: $handle_height;
+        background-color: $handle_color_1;
+        border-radius: 50%;
+        transition: background-color $tr-time $tr-type;
+        & > i{
+            display: none;
+        }
+
+        &.state_hover,
+        &:hover {
+            cursor: pointer;
+            background-color: $handle_color_2;
+        }
+    }
+
+    .#{$name}-min,
+    .#{$name}-max {
+        display: none;
+        top: 0;
+        padding: 1px 3px;
+        color: $minmax_text_color;
+        font-size: 10px;
+        line-height: 1.333;
+        text-shadow: none;
+        background-color: $minmax_bg_color;
+        border-radius: $custom_radius;
+    }
+
+    .#{$name}-from,
+    .#{$name}-to,
+    .#{$name}-single {
+        display: none;
+        color: $label_color_2;
+        font-size: 10px;
+        line-height: 1.333;
+        text-shadow: none;
+        padding: 1px 5px;
+        background-color: $label_color_1;
+        border-radius: $custom_radius;
+
+        &:before {
+            position: absolute;
+            display: block;
+            content: "";
+            bottom: -6px;
+            left: 50%;
+            width: 0;
+            height: 0;
+            margin-left: -3px;
+            overflow: hidden;
+            border: 3px solid transparent;
+            border-top-color: $label_color_1;
+        }
+    }
+
+    .#{$name}-grid {
+        display: none;
+        &-pol {
+            background-color: $grid_color_1;
+        }
+
+        &-text {
+            color: $grid_color_2;
+        }
+    }
+}

@@ -1,0 +1,176 @@
+.footer{
+    position: relative;
+    background-color: $footer-bg;
+    z-index: 1;
+    &__wrap{
+        position: relative;
+        padding-top: 160px;
+        padding-bottom: 20px;
+    }
+    &__bg {
+        position: absolute;
+        top: -80px;
+        left: calc(50% - 430px);
+        width: 860px;
+    }
+    &__top {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__brand {
+        height: 25px;
+        .brand__img {
+            margin: 0 auto;
+        }
+    }
+    &__middle {
+        display: flex;
+        margin-bottom: 55px;
+        padding-left: 30px;
+    }
+    &__contacts {
+        display: flex;
+        justify-content: space-between;
+        flex-basis: 50%;
+    }
+    &__instruction {
+        display: flex;
+        span {
+            white-space: nowrap;
+            margin-right: 5px;
+        }
+        .icon {
+            flex-shrink: 0;
+            height: 18px;
+            width: 18px;
+        }
+    }
+    &__warning {
+        margin-top: 25px;
+        margin-bottom: 33px;
+        padding: 0;
+        font-family: 'Oswald', sans-serif;
+        text-align: center;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: #202B56;
+        opacity: 0.3;
+    }
+    &__shop {
+        height: 75px;
+        margin-right: 60px;
+        margin-top: -20px;
+        img {
+            height: 100%;
+        }
+    }
+    &__menu {
+        .main-menu {
+            display: flex;
+            &__link {
+                color: $c-blue;
+                span {
+                    border-bottom: 1px solid $c-blue;
+                }
+            }
+        }
+    }
+    &__bottom {
+        display: flex;
+        font-size: 12px;
+        margin-right: 50px;
+        margin-left: 40px;
+    }
+    &__politics {
+        margin-right: 75px;
+    }
+    &__dnext{
+        margin-left: auto;
+    }
+
+    @include media('lg-max') {
+        &__brand {
+            margin-bottom: 15px;
+        }
+        &__menu {
+            margin-bottom: 15px;
+            .main-menu {
+                justify-content: center;
+            }
+        }
+        &__instruction {
+            justify-content: center;
+        }
+        &__middle {
+            justify-content: center;
+        }
+        &__contacts {
+            flex-basis: initial;
+            .nx-contacts__item {
+                margin-right: 15px;
+            }
+        }
+        &__link {
+            margin-right: 20px;
+        }
+        &__politics {
+            margin-right: 20px;
+        }
+        &__bottom {
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+
+    @include media('xs') {
+        &__bg {
+            top: -35px;
+            left: calc(50% - 180px);
+            width: 360px;
+        }
+        &__menu {
+            .main-menu {
+                flex-direction: column;
+                &__el {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        &__brand {
+            height: 20px;
+            margin-bottom: 20px;
+        }
+        &__wrap{
+            padding-top: 30px;
+        }
+        &__middle {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 0;
+        }
+        &__warning {
+            line-height: 130%;
+        }
+        &__shop {
+            margin: 0 auto 10px;
+        }
+        &__contacts {
+            flex-direction: column;
+            align-items: center;
+            .nx-contacts__label, .nx-contacts__title {
+                text-align: center;
+            }
+            .nx-contacts__item {
+                margin: 0;
+            }
+        }
+        &__bottom {
+            display: none;
+        }
+    }
+}
+
+

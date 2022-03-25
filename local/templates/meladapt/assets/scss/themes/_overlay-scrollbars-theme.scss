@@ -1,0 +1,81 @@
+.os-theme-dnext{
+    > .os-scrollbar-horizontal .os-scrollbar-handle:before,
+    > .os-scrollbar-vertical .os-scrollbar-handle:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: block;
+    }
+
+    > .os-scrollbar-horizontal {
+        right: map_get($scrollbarCustom, handle-size);
+        height: map_get($scrollbarCustom, handle-size);
+        > .os-scrollbar-track > .os-scrollbar-handle {
+            min-width: 30px;
+        }
+        .os-scrollbar-handle:before {
+            top: 0;
+            bottom: 0;
+        }
+    }
+    > .os-scrollbar-vertical {
+        bottom: map_get($scrollbarCustom, handle-size);
+        width: map_get($scrollbarCustom, handle-size);
+        > .os-scrollbar-track > .os-scrollbar-handle {
+            min-height: 30px;
+        }
+        .os-scrollbar-handle:before {
+            left: 0;
+            right: 0;
+        }
+    }
+
+    > .os-scrollbar-corner {
+        height: map_get($scrollbarCustom, handle-size);
+        width: map_get($scrollbarCustom, handle-size);
+        background-color: transparent;
+    }
+    > .os-scrollbar {
+        box-sizing: border-box;
+        background: transparent;
+        &.os-scrollbar-unusable {
+            background: transparent;
+            visibility: hidden;
+            opacity: 0;
+        }
+        > .os-scrollbar-track {
+            background: map_get($scrollbarCustom, track-bg);
+            > .os-scrollbar-handle {
+                background: map_get($scrollbarCustom, handle-bg);
+                &.active {
+                    background: map_get($scrollbarCustom, handle-bg-active);
+                }
+            }
+        }
+        > .os-scrollbar-handle,
+        > .os-scrollbar-track {
+            border-radius: map_get($scrollbarCustom, handle-radius);
+        }
+
+        &:hover > .os-scrollbar-track > .os-scrollbar-handle {
+            background: map_get($scrollbarCustom, handle-bg-hover);
+        }
+    }
+
+    &.os-host-transition > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
+        -webkit-transition: background-color 0.3s;
+        transition: background-color 0.3s;
+    }
+
+    &.os-host-scrollbar-horizontal-hidden > .os-scrollbar-horizontal .os-scrollbar-handle:before,
+    &.os-host-scrollbar-vertical-hidden > .os-scrollbar-vertical .os-scrollbar-handle:before {
+        display: none;
+    }
+}
+
+
+
+

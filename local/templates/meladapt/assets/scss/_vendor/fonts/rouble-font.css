@@ -1,0 +1,17 @@
+
+@font-face {
+    font-family: 'rouble';
+    src: url('/local/templates/meladapt/assets/fonts/rouble/rouble-webfont.eot');
+    src: url('/local/templates/meladapt/assets/fonts/rouble/rouble-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/local/templates/meladapt/assets/fonts/rouble/rouble-webfont.woff') format('woff'),
+         url('/local/templates/meladapt/assets/fonts/rouble/rouble-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.rouble, .r, .rub {
+	font-family: 'rouble', serif;
+	font-weight: normal;
+    font-style: normal;
+	text-transform: none;
+
+}

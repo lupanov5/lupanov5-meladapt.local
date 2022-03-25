@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Amatic SC';
+    src: url('/local/templates/meladapt/assets/fonts/Amatic_SC/AmaticSC-Regular.woff') format('woff'),
+    url('/local/templates/meladapt/assets/fonts/Amatic_SC/AmaticSC-Regular.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Amatic SC';
+    src: url('/local/templates/meladapt/assets/fonts/Amatic_SC/AmaticSC-Bold.woff') format('woff'),
+    url('/local/templates/meladapt/assets/fonts/Amatic_SC/AmaticSC-Bold.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 700;
+}

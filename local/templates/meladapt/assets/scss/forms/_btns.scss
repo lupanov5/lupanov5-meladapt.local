@@ -1,0 +1,89 @@
+.btn{
+    position: relative;
+    display: inline-block;
+    background-color: map_get($button, main-bg);
+    height: auto;
+    font-size: $fz-main;
+    font-weight: 500;
+    line-height: 1.35;
+    text-align: center;
+    white-space: normal;
+    padding: 13px 25px;
+    border-radius: $brd-rad-main;
+    cursor: pointer;
+    transition: all $tr-time $tr-type;
+    box-shadow: none;
+    color: map_get($button, main-color);
+    border: 1px solid transparent;
+    span{
+        border-bottom: none;
+    }
+    &:hover{
+        background-color: transparent;
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    &#{&}_d-block{
+        display: block;
+        width: 100%;
+    }
+    &#{&}_d-block-xs{
+        @include media('xs'){
+            display: block;
+            width: 100%;
+        }
+    }
+    &#{&}_lt{
+        background-color: $c-orange;
+        color: $c-blue;
+        &:hover {
+            background-color: white;
+        }
+    }
+    &#{&}_brd{
+        background-color: transparent;
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        &:hover {
+            background-color: map_get($button, main-bg);
+            border: 1px solid transparent;
+            color: $c-blue;
+        }
+    }
+    &#{&}_br{
+        border: 2px solid map_get($button, main-bg);
+        &, &:hover{
+            background-color: white;
+            color: map_get($button, main-bg);
+        }
+        &:hover{
+            border-color: map_get($button, bg-color);
+        }
+    }
+    &#{&}_clr {
+        padding: 0;
+        &:hover {
+            padding: 0;
+        }
+    }
+    &[disabled], &.disabled{
+        &, &:focus, &:hover, &:active{
+            background: map_get($button, disabled-bg);
+            color: map_get($button, disabled-color);
+            box-shadow: none;
+            cursor: not-allowed;
+        }
+    }
+    &[readonly], &.readonly{
+        &, &:focus, &:hover, &:active{
+            background: map_get($button, disalbed-bg);
+            color: map_get($button, disabled-color);
+            box-shadow: none;
+            cursor: not-allowed;
+        }
+    }
+    [type="file"]{
+        display: none;
+    }
+}

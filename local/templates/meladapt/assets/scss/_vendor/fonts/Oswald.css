@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Oswald';
+    src: url('/local/templates/meladapt/assets/fonts/Oswald/Oswald-Regular.woff') format('woff'),
+    url('/local/templates/meladapt/assets/fonts/Oswald/Oswald-Regular.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+}

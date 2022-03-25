@@ -1,0 +1,422 @@
+//Gallery slider styles
+$galSlider: (
+    //main
+    height: 650px,
+    height-sm: 400px,
+    height-xs: 210px,
+    
+    height-small: 395px,
+    
+    height-v: 400px,
+    height-v-sm: 400px,
+    height-v-xs: 210px,
+    
+    main-img-bg-under: rgba(gray, .07),
+    
+    //thumbs
+    thumb-bg-under-img: rgba(gray, .1),
+    
+    thumb-offset: 15px,
+    thumb-offset-sm: 15px,
+    thumb-offset-xs: 10px,
+    
+    
+    height-med: 515px,
+    thumb-h-med: 65px,
+    thubs-w-med: 55px,
+    
+    
+    thumb-offset-v: 15px,
+    thumb-offset-v-sm: 15px,
+    thumb-offset-v-xs: 10px,
+    
+    thumb-brd-size: 2px,
+    thumb-brd-size-sm: 2px,
+    thumb-brd-size-xs: 1px,
+    
+    thumb-brd-w: 100%,
+    thumb-brd-w-sm: 100%,
+    thumb-brd-w-xs: 100%,
+    
+    thumb-brd-h: 4px,
+    thumb-brd-h-sm: 4px,
+    thumb-brd-h-xs: 2px,
+    
+    thumb-brd-h-small: 3px,
+    
+    thumb-brd-color: $c-dark,
+    thumb-brd-active: $c-dark,
+    thumb-brd-hover: $c-dark,
+    
+    thumb-w: 130px,
+    thumb-w-sm: 80px,
+    thumb-w-xs: 60px,
+    
+    thumb-w-small: 100px,
+    
+    thumb-w-v: 80px,
+    thumb-w-v-sm: 80px,
+    thumb-w-v-xs: 60px,
+    
+    thumb-h: 75px,
+    thumb-h-sm: 60px,
+    thumb-h-xs: 45px,
+    
+    thumb-h-small: 55px,
+    
+    thumb-h-v: 60px,
+    thumb-h-v-sm: 60px,
+    thumb-h-v-xs: 45px,
+    
+    //arrows
+    arrow-bg: transparent,
+    
+    arrow-color: rgba(black, .4),
+    arrow-color-hover: black,
+    arrow-color-disabled: rgba(black, .1),
+    
+    arrow-fz: 30px,
+    arrow-fz-sm: 28px,
+    arrow-fz-xs: 24px,
+    
+    arrow-w: 100px,
+    arrow-w-sm: 80px,
+    arrow-w-xs: 40px,
+    
+    arrow-icon-w: 30px,
+    arrow-icon-w-sm: 30px,
+    arrow-icon-w-xs: 12px,
+    
+    arrow-icon-h: 30px,
+    arrow-icon-h-sm: 30px,
+    arrow-icon-h-xs: 15px,
+);
+
+.nx-gal-slider{
+    position: relative;
+    height: map_get($galSlider, height);
+    padding-bottom: map_get($galSlider, thumb-h) + map_get($galSlider, thumb-offset);
+    width: 100%;
+    user-select: none;
+    
+    //&__single-img{}
+    
+    &__main-wrap, &__thumbs-wrap{
+        transition-duration: 200ms;
+        height: 100%;
+    }
+    
+    //Gallery main slider
+    &__main {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: map_get($galSlider, main-img-bg-under);
+        &-slide{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+        &-img{
+            flex: none;
+            display: block;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            min-width: 0;
+            margin: auto;
+        }
+    }
+    
+    //Gallery slider thumbnails
+    &__thumbs{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: map_get($galSlider, thumb-h);
+        width: 100%;
+        box-sizing: border-box;
+        z-index: 1;
+        overflow: hidden;
+        padding-bottom: 10px;
+        &-slide{
+            position: relative;
+            width: map_get($galSlider, thumb-w);
+            height: 100%;
+            transition: opacity .2s $tr-type;
+            background: map_get($galSlider, thumb-bg-under-img) center no-repeat;
+            background-size: cover;
+            opacity: .7;
+            border-radius: $brd-rad-box;
+            &:after{
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+                width: map_get($galSlider, thumb-brd-w);
+                height: map_get($galSlider, thumb-brd-h);
+                visibility: hidden;
+                opacity: 0;
+                z-index: 10;
+                transition: inherit;
+                box-shadow: inset 0 0 0 map_get($galSlider, thumb-brd-size) map_get($galSlider, thumb-brd-color);
+            }
+            
+            &.swiper-active-thumb:after, &:hover:after{
+                visibility: visible;
+                opacity: 1;
+            }
+            &:hover{
+                cursor: pointer;
+                opacity: 1;
+                &:after{
+                    box-shadow: inset 0 0 0 map_get($galSlider, thumb-brd-size) map_get($galSlider, thumb-brd-hover);
+                }
+            }
+            &.swiper-active-thumb{
+                cursor: default;
+                opacity: 1;
+                &:after{
+                    box-shadow: inset 0 0 0 map_get($galSlider, thumb-brd-size) map_get($galSlider, thumb-brd-active);
+                }
+            }
+        }
+    }
+    
+    //Gallery slider main arrows
+    &__next, &__prev {
+        position: absolute;
+        top: 0;
+        display: block;
+        height: 100%;
+        width: map_get($galSlider, arrow-w);
+        background: map_get($galSlider, arrow-bg);
+        color: map_get($galSlider, arrow-color);
+        cursor: pointer;
+        z-index: 100;
+        text-align: center;
+        transition: all $tr-time $tr-type;
+        &-icon{
+            display: block;
+            @extend %centered-absolute;
+            width: map_get($galSlider, arrow-icon-w);
+            height: map_get($galSlider, arrow-icon-h);
+            font-size: map_get($galSlider, arrow-fz);
+            line-height: 1;
+            fill: white;
+        }
+        &:hover {
+            color: map_get($galSlider, arrow-color-hover);
+        }
+        
+        &.swiper-button-disabled {
+            pointer-events: none;
+            &, &:hover{
+                color: map_get($galSlider, arrow-color-disabled);
+            }
+        }
+    }
+    &__next{
+        transform: scale(-1);
+        right: 0;
+    }
+    &__prev{
+        left: 0;
+    }
+    
+    &_single{
+        padding-left: 0;
+    }
+    &_small {
+        height: map_get($galSlider, height-small);
+        padding-bottom: map_get($galSlider, thumb-h-small) + map_get($galSlider, thumb-offset);
+        .nx-gal-slider__thumbs{
+            height: map_get($galSlider, thumb-h-small);
+            &-slide{
+                width: map_get($galSlider, thumb-w-small);
+                &:after{
+                    bottom: -9px;
+                    height: map_get($galSlider, thumb-brd-h-small);
+                }
+            }
+        }
+    }
+    &_med {
+        height: map_get($galSlider, height-med);
+        padding-bottom: map_get($galSlider, thumb-h-med) + map_get($galSlider, thumb-offset);
+        .nx-gal-slider__thumbs{
+            height: map_get($galSlider, thumb-h-med);
+            &-slide{
+                width: map_get($galSlider, thumb-w-med);
+            }
+        }
+    }
+    &_fill-img{
+        .nx-gal-slider__main-img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            font-family: 'object-fit: cover;';
+        }
+    }
+    
+    &.not-visible{
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity $tr-time $tr-type;
+    }
+    &[data-gal="vertical"]{
+        height: map_get($galSlider, height-v);
+        padding-left: map_get($galSlider, thumb-w-v) + map_get($galSlider, thumb-offset-v);
+        padding-bottom: 0;
+        .nx-gal-slider__thumbs{
+            bottom: auto;
+            left: 0;
+            top: 0;
+            right: auto;
+            height: 100%;
+            width: map_get($galSlider, thumb-w-v);
+            &-slide{
+                width: 100%;
+                height: map_get($galSlider, thumb-h-v);
+                &:after {
+                    bottom: -5px;
+                }
+            }
+        }
+    }
+    
+    //Responsive
+    @include media('sm-min', 'sm-max'){
+        height: map_get($galSlider, height-sm);
+        padding-bottom: map_get($galSlider, thumb-h-sm) + map_get($galSlider, thumb-offset-sm);
+        
+        &__thumbs{
+            height: map_get($galSlider, thumb-h-sm);
+            &-slide{
+                width: map_get($galSlider, thumb-w-sm);
+                &:after{
+                    width: map_get($galSlider, thumb-brd-w-sm);
+                    height: map_get($galSlider, thumb-brd-h-sm);
+                    box-shadow: inset 0 0 0 map_get($galSlider, thumb-brd-size-sm) map_get($galSlider, thumb-brd-color);
+                }
+                &:hover{
+                    &:after{
+                        box-shadow: inset 0 0 0 map_get($galSlider, thumb-brd-size-sm) map_get($galSlider, thumb-brd-hover);
+                    }
+                }
+                &.swiper-active-thumb{
+                    &:after{
+                        box-shadow: inset 0 0 0 map_get($galSlider, thumb-brd-size-sm) map_get($galSlider, thumb-brd-active);
+                    }
+                }
+            }
+        }
+    
+        &__next, &__prev {
+            width: map_get($galSlider, arrow-w-sm);
+            &-icon{
+                width: map_get($galSlider, arrow-icon-w-sm);
+                height: map_get($galSlider, arrow-icon-h-sm);
+                font-size: map_get($galSlider, arrow-fz-sm);
+            }
+        }
+    
+        &[data-gal="vertical"]{
+            height: map_get($galSlider, height-v-sm);
+            padding-left: map_get($galSlider, thumb-w-v-sm) + map_get($galSlider, thumb-offset-v-sm);
+            padding-bottom: 0;
+            .nx-gal-slider__thumbs{
+                bottom: auto;
+                left: 0;
+                top: 0;
+                right: auto;
+                height: 100%;
+                width: map_get($galSlider, thumb-w-v-sm);
+                &-slide{
+                    width: 100%;
+                    height: map_get($galSlider, thumb-h-v-sm);
+                }
+            }
+        }
+    }
+    
+    @include media('xs'){
+        height: map_get($galSlider, height-xs);
+        padding-bottom: map_get($galSlider, thumb-h-xs) + map_get($galSlider, thumb-offset-xs);
+    
+        &__thumbs{
+            height: map_get($galSlider, thumb-h-xs);
+            &-slide{
+                width: map_get($galSlider, thumb-w-xs);
+                &:after{
+                    width: map_get($galSlider, thumb-brd-w-xs);
+                    height: map_get($galSlider, thumb-brd-h-xs);
+                    bottom: -6px;
+                    box-shadow: inset 0 0 0 map_get($galSlider, thumb-brd-size-xs) map_get($galSlider, thumb-brd-color);
+                }
+                &:hover{
+                    &:after{
+                        box-shadow: inset 0 0 0 map_get($galSlider, thumb-brd-size-xs) map_get($galSlider, thumb-brd-hover);
+                    }
+                }
+                &.swiper-active-thumb{
+                    &:after{
+                        box-shadow: inset 0 0 0 map_get($galSlider, thumb-brd-size-xs) map_get($galSlider, thumb-brd-active);
+                    }
+                }
+            }
+        }
+    
+        &__next, &__prev {
+            width: map_get($galSlider, arrow-w-xs);
+            &-icon{
+                width: map_get($galSlider, arrow-icon-w-xs);
+                height: map_get($galSlider, arrow-icon-h-xs);
+                font-size: map_get($galSlider, arrow-fz-xs);
+            }
+        }
+    
+        &[data-gal="vertical"]{
+            height: map_get($galSlider, height-v-xs);
+            padding-left: map_get($galSlider, thumb-w-v-xs) + map_get($galSlider, thumb-offset-v-xs);
+            padding-bottom: 0;
+            .nx-gal-slider__thumbs{
+                bottom: auto;
+                left: 0;
+                top: 0;
+                right: auto;
+                height: 100%;
+                width: map_get($galSlider, thumb-w-v-xs);
+                &-slide{
+                    width: 100%;
+                    height: map_get($galSlider, thumb-h-v-xs);
+                }
+            }
+        }
+        &_small {
+            height: map_get($galSlider, height-xs);
+            .nx-gal-slider__thumbs{
+                height: map_get($galSlider, thumb-h-xs);
+                &-slide{
+                    width: map_get($galSlider, thumb-w-xs);
+                }
+            }
+        }
+        &_med {
+            height: map_get($galSlider, height-xs);
+            .nx-gal-slider__thumbs{
+                height: map_get($galSlider, thumb-h-xs);
+                &-slide{
+                    width: map_get($galSlider, thumb-w-xs);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.whom {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    position: relative;
+    &__bg {
+        position: absolute;
+    }
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__head {
+        max-width: 400px;
+        margin-right: 40px;
+        color: $c-blue;
+        h1 {
+            font-family: 'Amatic SC', cursive;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 120px;
+            line-height: 90%;
+        }
+    }
+}

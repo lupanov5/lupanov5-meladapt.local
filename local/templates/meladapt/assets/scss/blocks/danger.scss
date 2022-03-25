@@ -1,0 +1,56 @@
+.danger {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    position: relative;
+    &__bg {
+        position: absolute;
+        top: -25%;
+        z-index: -1;
+        max-width: 80%;
+        right: -25%;
+    }
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__head {
+        max-width: 400px;
+        margin-right: 40px;
+        color: $c-blue;
+        h1 {
+            font-family: 'Amatic SC', cursive;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 120px;
+            line-height: 90%;
+        }
+    }
+    &__block {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 50%;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 180px;
+        margin-right: 10px;
+    }
+    &__img {
+        height: 100px;
+        width: 100px;
+        margin-bottom: 20px;
+        img {
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    &__text {
+        line-height: 110%;
+        text-align: center;
+        color: $c-blue;
+    }
+}

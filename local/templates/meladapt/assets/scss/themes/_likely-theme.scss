@@ -1,0 +1,67 @@
+$share: (
+        share-icon-w: 16px,
+        share-icon-h: 16px,
+);
+.likely{
+    &_dnext{
+        margin: 0 0 -12px;
+        width: 100%;
+        .likely__widget{
+            @extend .btn;
+            fill: map_get($button, main-color);
+            margin: 0 15px 15px 0;
+            padding: 9px 20px;
+    
+            &_facebook, &_facebook:hover{
+                background: map_get($social, fb);
+            }
+            &_vkontakte, &_vkontakte:hover{
+                background: map_get($social, vk);
+            }
+            &_twitter, &_twitter:hover{
+                background: map_get($social, tw);
+            }
+            &_telegram, &_telegram:hover{
+                background: map_get($social, tg);
+            }
+            &_odnoklassniki, &_odnoklassniki:hover{
+                background: map_get($social, od);
+            }
+            &_whatsapp, &_whatsapp:hover{
+                background: map_get($social, wa);
+            }
+            &_pinterest, &_pinterest:hover{
+                background: map_get($social, pin);
+            }
+            &:hover{
+                opacity: .8;
+            }
+        }
+        
+        .likely__button{
+            padding: 0;
+            line-height: 1.4;
+        }
+        
+        .likely__counter{
+            padding: 3px 5px 0;
+            font-size: $fz-min;
+            color: rgba(map_get($button, main-color), .5);
+        }
+        
+        svg {
+            left: -4px;
+            top: 50%;
+            margin-top: map_get($share, share-icon-h) / -2;
+            width: map_get($share, share-icon-w);
+            height: map_get($share, share-icon-h);
+        }
+    }
+    @include media('xs') {
+        &_dnext {
+            .likely__widget {
+                width: 100%;
+            }
+        }
+    }
+}

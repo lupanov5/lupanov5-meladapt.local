@@ -1,0 +1,47 @@
+.melatonin {
+    padding-top: 70px;
+    padding-bottom: 90px;
+    background-color: $c-blue;
+    position: relative;
+    .promo__head {
+        margin-bottom: 50px;
+    }
+    &__bg {
+        position: absolute;
+        img {
+            &:nth-child(1) {
+                position: relative;
+                top: 120px;
+                right: 19%;
+                object-position: right;
+                width: 50%;
+            }
+            &:nth-child(2) {
+                position: absolute;
+                top: -13%;
+                right: 53%;
+                width: 41%;
+            }
+            &:nth-child(3) {
+                position: absolute;
+                top: -24%;
+                right: 57%;
+                width: 45%;
+            }
+        }
+    }
+
+    &__container {
+        max-width: 50%;
+        margin-left: auto;
+        margin-right: 0;
+    }
+    &__feat {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 45px;
+        .feat__item {
+            max-width: 225px;
+        }
+    }
+}
