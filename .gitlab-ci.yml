@@ -1,0 +1,23 @@
+stages:
+  - deploy
+
+deploy_staging:
+  stage: deploy
+  when: on_success
+  only:
+    - dev
+  tags:
+    - deploy
+    - staging
+    - bitrix
+  environment:
+    name: staging
+    url: "192.168.1.103"
+  variables:
+    DEPLOY_PATH: /var/www/$CI_PROJECT_NAME
+    DEPLOY_USER: deploy
+    WRITABLE_USE_SUDO: "true"
+    PROVIDER: "no-cms"
+  script:
+    - sudo -H -E ~/scripts/deploy/configure.sh
+    - sudo -H -E ~/scripts/deploy/deploy_bitrix_extended.sh
