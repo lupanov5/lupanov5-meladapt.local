@@ -4,10 +4,11 @@
         background-color: white;
         padding: 40px;
         margin-right: 20px;
-        width: 25%;
+        width: calc(25% - 20px);
         &_shop {
             padding: 30px;
             background-color: #F5F7FF;
+            margin-right: 0;
         }
     }
     &__head {

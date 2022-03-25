@@ -9,6 +9,7 @@
             <?php require_once 'blocks/use.php'; ?>
             <?php require_once 'blocks/property.php'; ?>
             <?php require_once 'blocks/buy.php'; ?>
+            <?php require_once 'blocks/main-questions.php'; ?>
 
     </div>
 

@@ -1,51 +1,41 @@
 <?php
 
 $ajax = $_POST['ajax'];
-$html = '<li class="questions__item">
-                <div class="questions__item_question" data-tab-btn="qw-1">
-                    <span>Если у меня бессонница, чем мне поможет препарат?</span>
-
+$html = '<li class="list__item list__item_shop">
+                <div class="list__head list__head_shop">
+                    <img src="/local/templates/meladapt/assets/images/shop-3.png" alt="shop">
                 </div>
-                <div class="questions__item_answer" data-tab-content="qw-1">
-                    <p>Равным образом укрепление и развитие структуры требуют определения и уточнения систем массового участия. Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям.</p>
-                </div>
-
+                <div class="list__title list__title_shop">Яндекс.Маркет</div>
             </li>
-
-            <li class="questions__item">
-                <div class="questions__item_question" data-tab-btn="qw-2">
-                    <span>Я смогу купить препарат без рецепта?</span>
+            <li class="list__item list__item_shop">
+                <div class="list__head list__head_shop">
+                    <img src="/local/templates/meladapt/assets/images/shop-4.png" alt="shop">
                 </div>
-                <div class="questions__item_answer" data-tab-content="qw-2">
-                    <p>Равным образом укрепление и развитие структуры требуют определения и уточнения систем массового участия. Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям.</p>
-                </div>
-
+                <div class="list__title list__title_shop">Вита</div>
             </li>
-
-            <li class="questions__item">
-                <div class="questions__item_question" data-tab-btn="qw-3">
-                    <span>Препарат вызывает привыкание? Боюсь, что после приема, не смогу без него засыпать</span>
+            <li class="list__item list__item_shop">
+                <div class="list__head list__head_shop">
+                    <img src="/local/templates/meladapt/assets/images/shop-5.png" alt="shop">
                 </div>
-                <div class="questions__item_answer" data-tab-content="qw-3">
-                    <p>Равным образом укрепление и развитие структуры требуют определения и уточнения систем массового участия. Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям.</p>
-                </div>
+                <div class="list__title list__title_shop">Планета здоровья</div>
             </li>
-
-            <li class="questions__item">
-                <div class="questions__item_question" data-tab-btn="qw-4"><span>Препарат вызывает привыкание? Боюсь, что после приема, не смогу без него засыпать</span>
+            <li class="list__item list__item_shop">
+                <div class="list__head list__head_shop">
+                    <img src="/local/templates/meladapt/assets/images/shop-6.png" alt="shop">
                 </div>
-                <div class="questions__item_answer" data-tab-content="qw-4">
-                    <p>Равным образом укрепление и развитие структуры требуют определения и уточнения систем массового участия. Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям.</p>
-                </div>
-
+                <div class="list__title list__title_shop">Uteka.ru</div>
             </li>
-
-            <li class="questions__item">
-                <div class="questions__item_question" data-tab-btn="qw-5"><span>Препарат вызывает привыкание? Боюсь, что после приема, не смогу без него засыпать</span>
+            <li class="list__item list__item_shop">
+                <div class="list__head list__head_shop">
+                    <img src="/local/templates/meladapt/assets/images/shop-7.png" alt="shop">
                 </div>
-                <div class="questions__item_answer" data-tab-content="qw-5">
-                    <p>Равным образом укрепление и развитие структуры требуют определения и уточнения систем массового участия. Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям.</p>
+                <div class="list__title list__title_shop">Asna.ru</div>
+            </li>
+            <li class="list__item list__item_shop">
+                <div class="list__head list__head_shop">
+                    <img src="/local/templates/meladapt/assets/images/shop-8.png" alt="shop">
                 </div>
+                <div class="list__title list__title_shop">Магнит-Аптека</div>
             </li>';
 
 echo json_encode([

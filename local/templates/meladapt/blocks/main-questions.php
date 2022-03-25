@@ -1,9 +1,6 @@
-<section class="container questions">
-    <div class="questions__decor">
+<section class="container questions_main">
+    <div class="questions__bg">
         <img src="/local/templates/meladapt/assets/images/КВ.png" alt="">
-        <img src="/local/templates/meladapt/assets/images/decor0.png" alt="">
-        <img src="/local/templates/meladapt/assets/images/decor1.png" alt="">
-        <img src="/local/templates/meladapt/assets/images/decor2.png" alt="">
     </div>
     <div class="content-narrow">
         <div class="questions__title">
@@ -41,27 +38,11 @@
                     <p>Равным образом укрепление и развитие структуры требуют определения и уточнения систем массового участия. Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям.</p>
                 </div>
             </li>
-
-            <li class="questions__item">
-                <div class="questions__item_question" data-tab-btn="qw-4"><span>Препарат вызывает привыкание? Боюсь, что после приема, не смогу без него засыпать</span>
-                </div>
-                <div class="questions__item_answer" data-tab-content="qw-4">
-                    <p>Равным образом укрепление и развитие структуры требуют определения и уточнения систем массового участия. Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям.</p>
-                </div>
-
-            </li>
-
-            <li class="questions__item">
-                <div class="questions__item_question" data-tab-btn="qw-5"><span>Препарат вызывает привыкание? Боюсь, что после приема, не смогу без него засыпать</span>
-                </div>
-                <div class="questions__item_answer" data-tab-content="qw-5">
-                    <p>Равным образом укрепление и развитие структуры требуют определения и уточнения систем массового участия. Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям.</p>
-                </div>
-            </li>
         </ul>
 
         <div class="questions__buttons">
             <a href="" class="btn questions__btn"><span>Задать вопрос</span></a>
+            <a href="/local/templates/meladapt/pages/questions.php" class="btn btn_brd questions__btn"><span>Читать далее</span></a>
         </div>
     </div>
 </section>

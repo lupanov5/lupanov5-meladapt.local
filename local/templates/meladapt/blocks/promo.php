@@ -1,7 +1,11 @@
 <section class="promo">
 
-    <div class="promo__bg">
+    <div class="promo__bg-right">
         <img src="/local/templates/meladapt/assets/images/bg.png" alt="">
+    </div>
+    <div class="promo__bg-left">
+        <img src="/local/templates/meladapt/assets/images/promo-1.png" alt="">
+        <img src="/local/templates/meladapt/assets/images/promo-2.png" alt="">
     </div>
     <div class="container">
         <div class="promo__head">
