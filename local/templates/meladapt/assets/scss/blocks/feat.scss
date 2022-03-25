@@ -1,8 +1,8 @@
 .feat {
     &__item {
         display: flex;
-        max-width: 300px;
-        margin-right: 10px;
+        max-width: 270px;
+        margin-right: 35px;
         &:nth-child(2) {
             animation-delay: 0.5s;
             animation-fill-mode: both
@@ -18,7 +18,7 @@
     }
     &__img {
         height: 60px;
-        width: 60px;
+        width: 100px;
         margin-right: 10px;
     }
     &__text {
