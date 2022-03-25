@@ -1,6 +1,6 @@
 .melatonin {
     padding-top: 70px;
-    padding-bottom: 90px;
+    padding-bottom: 80px;
     background-color: $c-blue;
     position: relative;
     .promo__head {
@@ -11,22 +11,21 @@
         img {
             &:nth-child(1) {
                 position: relative;
-                top: 120px;
-                right: 19%;
-                object-position: right;
-                width: 50%;
+                top: 100px;
+                right: 18%;
+                width: 51%;
             }
             &:nth-child(2) {
                 position: absolute;
-                top: -13%;
-                right: 53%;
-                width: 41%;
+                top: -22%;
+                right: 50%;
+                width: 33%;
             }
             &:nth-child(3) {
                 position: absolute;
-                top: -24%;
+                top: -21%;
                 right: 57%;
-                width: 45%;
+                width: 76%;
             }
         }
     }
@@ -35,13 +34,20 @@
         max-width: 50%;
         margin-left: auto;
         margin-right: 0;
+        padding-left: 0;
+        z-index: 2;
     }
     &__feat {
         display: flex;
         flex-wrap: wrap;
-        gap: 45px;
+        gap: 40px;
         .feat__item {
-            max-width: 225px;
+            max-width: 250px;
+        }
+    }
+    .promo__head {
+        h1 {
+            margin-bottom: 10px;
         }
     }
 }

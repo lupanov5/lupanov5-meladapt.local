@@ -1,11 +1,13 @@
 .use {
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding-top: 75px;
+    padding-bottom: 20px;
     position: relative;
     &__bg {
         position: absolute;
-        top: 0;
-        left: 0;
+        top: -20%;
+        left: -26%;
+        width: 150%;
+        z-index: -1;
         img {
             width: 50%;
             top: 0;
@@ -26,11 +28,12 @@
             font-weight: 700;
             font-size: 120px;
             line-height: 90%;
+            margin-bottom: 10px;
         }
     }
     &__subtitle {
         opacity: 0.6;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         span {
             font-weight: 700;
         }
@@ -75,7 +78,7 @@
     &-tablet {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 40px;
+        margin-bottom: 50px;
         &__item {
             display: flex;
             max-width: 50%;

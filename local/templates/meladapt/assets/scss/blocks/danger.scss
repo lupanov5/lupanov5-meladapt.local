@@ -1,21 +1,22 @@
 .danger {
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding-top: 10px;
+    padding-bottom: 55px;
     position: relative;
     &__bg {
         position: absolute;
-        top: -25%;
+        top: -56%;
         z-index: -1;
-        max-width: 80%;
-        right: -25%;
+        max-width: 76%;
+        right: -22%;
     }
     &__container {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
     &__head {
         max-width: 400px;
-        margin-right: 40px;
+        margin-right: 120px;
         color: $c-blue;
         h1 {
             font-family: 'Amatic SC', cursive;
@@ -29,6 +30,7 @@
         display: flex;
         flex-wrap: wrap;
         max-width: 50%;
+        gap: 25px;
     }
     &__item {
         display: flex;
@@ -36,8 +38,9 @@
         align-items: center;
         padding-left: 20px;
         padding-right: 20px;
-        width: 180px;
-        margin-right: 10px;
+        width: 170px;
+        margin-right: 0px;
+        margin-bottom: 35px;
     }
     &__img {
         height: 100px;

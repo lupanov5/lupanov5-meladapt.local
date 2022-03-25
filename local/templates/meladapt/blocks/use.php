@@ -1,11 +1,11 @@
 <section class="use">
 
-    <div class="use__bg">
-        <img src="/local/templates/meladapt/assets/images/use-bg.png" alt="">
-    </div>
     <div class="container use__container">
 
         <div class="use-picture">
+            <div class="use__bg">
+                <img src="/local/templates/meladapt/assets/images/use-bg.png" alt="">
+            </div>
             <div class="use-picture__head">
                 <span class="use-picture__head_item active">10 Таблеток</span>
                 <span class="use-picture__head_item">30 Таблеток</span>

@@ -20,6 +20,11 @@
         height: 60px;
         width: 100px;
         margin-right: 10px;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
     }
     &__text {
         font-weight: 400;
