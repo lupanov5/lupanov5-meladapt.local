@@ -1,7 +1,8 @@
 <section class="whom">
 
     <div class="whom__bg">
-        <!--<img src="/local/templates/meladapt/assets/images/danger-bg.png" alt="">-->
+        <img src="/local/templates/meladapt/assets/images/whom-bg1.png" alt="">
+        <img src="/local/templates/meladapt/assets/images/whom-bg2.png" alt="">
     </div>
     <div class="container whom__container">
 
@@ -18,8 +19,6 @@
                     Вы часто меняете часовой пояс
                 </span>
             </div>
-        </div>
-        <div class="whom__list">
             <div class="whom__item">
                 <svg class="icon">
                     <use xlink:href="#icon-arr-right"></use>
@@ -28,8 +27,6 @@
                     При сменном графике работы
                 </span>
             </div>
-        </div>
-        <div class="whom__list">
             <div class="whom__item">
                 <svg class="icon">
                     <use xlink:href="#icon-arr-right"></use>
@@ -38,8 +35,6 @@
                     При стрессе, который вызывает   различные проблемы со сном
                 </span>
             </div>
-        </div>
-        <div class="whom__list">
             <div class="whom__item">
                 <svg class="icon">
                     <use xlink:href="#icon-arr-right"></use>
@@ -49,8 +44,6 @@
                 </span>
             </div>
         </div>
-
-
     </div>
 
 </section>

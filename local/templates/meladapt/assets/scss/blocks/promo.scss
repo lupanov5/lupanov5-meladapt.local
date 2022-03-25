@@ -45,13 +45,13 @@
     }
     &__instr {
         display: flex;
-        .link {
+        span {
             font-weight: 800;
             line-height: 100%;
             text-align: center;
             margin-right: 4px;
             color: #FFFFFF;
-            text-decoration: white dashed;
+            border-bottom: 2px dashed rgba(255, 255, 255, 0.4);
         }
         .icon {
             width: 15px;

@@ -1,0 +1,36 @@
+.list {
+    list-style-type: none;
+    &__item {
+        background-color: white;
+        padding: 40px;
+        margin-right: 20px;
+        width: 25%;
+        &_shop {
+            padding: 30px;
+            background-color: #F5F7FF;
+        }
+    }
+    &__head {
+        height: 90px;
+        width: 90px;
+        margin: 0 auto 30px;
+        img {
+            height: 100%;
+        }
+        &_shop {
+            margin: 0 auto 15px;
+            height: 130px;
+            width: 130px;
+        }
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 110%;
+        text-align: center;
+        &_shop {
+            font-weight: 700;
+            opacity: 0.8;
+        }
+    }
+}

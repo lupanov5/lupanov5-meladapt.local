@@ -1,0 +1,19 @@
+.buy {
+    padding-top: 70px;
+    padding-bottom: 50px;
+    &__head {
+        color: $c-blue;
+        margin-bottom: 45px;
+        h1 {
+            font-family: 'Amatic SC', cursive;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 120px;
+            line-height: 90%;
+            margin-bottom: 10px;
+        }
+    }
+    &__subtitle {
+        opacity: 0.6;
+    }
+}

@@ -38,12 +38,12 @@
 
         <div class="promo__bottom">
             <a href="" class="btn btn_lt promo__btn">Купить в аптеке</a>
-            <div class="promo__instr">
-                <a href="#" class="link"><span>Скачать инструкцию</span></a>
+            <a href="#" class="link promo__instr">
+                <span>Скачать инструкцию</span>
                 <svg class="icon">
                     <use xlink:href="#icon-arr-white"></use>
                 </svg>
-            </div>
+            </a>
         </div>
 
     </div>

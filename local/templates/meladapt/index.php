@@ -6,6 +6,9 @@
             <?php require_once 'blocks/danger.php'; ?>
             <?php require_once 'blocks/melatonin.php'; ?>
             <?php require_once 'blocks/whom.php'; ?>
+            <?php require_once 'blocks/use.php'; ?>
+            <?php require_once 'blocks/property.php'; ?>
+            <?php require_once 'blocks/buy.php'; ?>
 
     </div>
 

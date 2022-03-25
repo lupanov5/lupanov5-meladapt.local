@@ -4,21 +4,49 @@
     position: relative;
     &__bg {
         position: absolute;
-    }
-    &__container {
-        display: flex;
-        justify-content: space-between;
+        img {
+            &:nth-child(1) {
+                width: 60%;
+                position: absolute;
+                right: -8px;
+                top: -21%;
+                z-index: 1;
+            }
+            &:nth-child(2) {
+                width: 91%;
+                position: relative;
+                right: -37%;
+                top: -177px;
+                z-index: 0;
+            }
+        }
     }
     &__head {
         max-width: 400px;
-        margin-right: 40px;
         color: $c-blue;
+        margin-bottom: 50px;
         h1 {
             font-family: 'Amatic SC', cursive;
             font-style: normal;
             font-weight: 700;
             font-size: 120px;
             line-height: 90%;
+        }
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        svg {
+            width: 40px;
+            height: 40px;
+            padding: 10px;
+            border: 1px solid rgba(32, 43, 86, 0.1);
+            border-radius: 50%;
+            margin-right: 10px;
         }
     }
 }
