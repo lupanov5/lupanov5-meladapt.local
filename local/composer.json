@@ -1,0 +1,47 @@
+{
+  "authors": [
+    {
+      "name": "Dnext",
+      "email": "dev@dnext.ru"
+    }
+  ],
+  "require": {
+    "php": "^7.4",
+    "ext-curl": "*",
+    "ext-dom": "*",
+    "ext-gd": "*",
+    "ext-iconv": "*",
+    "ext-intl": "*",
+    "ext-json": "*",
+    "ext-libxml": "*",
+    "ext-mbstring": "*",
+    "andreyryabin/sprint.migration": "^3.28",
+    "respect/validation": "^2.2",
+    "google/recaptcha": "^1.2"
+  },
+  "require-dev": {
+    "ergebnis/composer-normalize": "^2.13",
+    "fakerphp/faker": "^1.14",
+    "kint-php/kint": "3.3",
+    "roave/security-advisories": "dev-latest"
+  },
+  "config": {
+    "optimize-autoloader": true
+  },
+  "extra": {
+    "installer-paths": {
+      "modules/{$name}/": [
+        "type:bitrix-module"
+      ]
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "dnext\\": [
+        "../local/php_interface/classes/"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
