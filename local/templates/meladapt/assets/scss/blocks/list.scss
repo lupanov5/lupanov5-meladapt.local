@@ -2,13 +2,16 @@
     list-style-type: none;
     &__item {
         background-color: white;
-        padding: 40px;
         margin-right: 20px;
         width: calc(25% - 20px);
         &_shop {
-            padding: 30px;
             background-color: #F5F7FF;
             margin-right: 0;
+        }
+        &_link {
+            margin: 0 auto;
+            padding: 40px;
+            display: block;
         }
     }
     &__head {
