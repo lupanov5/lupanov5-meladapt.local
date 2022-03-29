@@ -20,7 +20,7 @@ $asset->addString(
 $asset->addCss(SITE_TEMPLATE_PATH . '/assets/vendor.css');
 $asset->addCss(SITE_TEMPLATE_PATH . '/assets/app.min.css');
 $asset->addJs(SITE_TEMPLATE_PATH . '/assets/app.min.js', true);
-
+$header = \dnext\Models\Home\Settings::instance()->getFirstCached();
 ?>
 <!DOCTYPE HTML>
 <html lang="<?= LANGUAGE_ID ?>">
@@ -56,7 +56,7 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/assets/app.min.js', true);
 
             <div class="header__brand">
                 <a href="/" class="brand">
-                    <img src="/local/templates/meladapt/assets/images/logo.png"
+                    <img src="<?= \dnext\Helpers\FilesHelper::getImageById($header['LOGOTYPE_HEADER']['VALUE']) ?>"
                          alt="{$smarty.const.SITE_NAME}"
                          class="brand__img">
                 </a>
@@ -69,25 +69,26 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/assets/app.min.js', true);
                     <div class="mnav__wrap">
                         <div class="mnav__menu">
                             <ul class="main-menu">
-                                <li class="main-menu__el" data-menu-el>
-                                    <a href="#" class="main-menu__link">
-                                        <span>Главная</span>
-                                    </a>
-                                </li>
 
-                                <li class="main-menu__el" data-menu-el>
-                                    <a href="#" class="main-menu__link">
-                                        <span>О продукте</span>
-                                    </a>
-                                </li>
+                                <?$APPLICATION->IncludeComponent(
+                                    "bitrix:menu",
+                                    "top",
+                                    Array(
+                                        "ALLOW_MULTI_SELECT" => "N",
+                                        "CHILD_MENU_TYPE" => "",
+                                        "DELAY" => "N",
+                                        "MAX_LEVEL" => "1",
+                                        "MENU_CACHE_GET_VARS" => array(""),
+                                        "MENU_CACHE_TIME" => "3600",
+                                        "MENU_CACHE_TYPE" => "N",
+                                        "MENU_CACHE_USE_GROUPS" => "Y",
+                                        "ROOT_MENU_TYPE" => "top",
+                                        "USE_EXT" => "N"
+                                    )
+                                );?>
 
-                                <li class="main-menu__el" data-menu-el>
-                                    <a href="/local/templates/meladapt/pages/questions.php" class="main-menu__link">
-                                        <span>Вопрос-ответ</span>
-                                    </a>
-                                </li>
 
-                                <a href="#" class="btn btn_brd mnav__btn">Где купить</a>
+                                <a href="/#buy" class="btn btn_brd mnav__btn"><?= $header['BUTTON_TEXT_HEADER']['VALUE'] ?></a>
 
 
 
