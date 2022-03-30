@@ -13,7 +13,7 @@
         height: 100%;
         top: 0;
         img {
-            height: 150%;
+            height: 120%;
             object-fit: cover;
             object-position: 20%;
         }
@@ -30,6 +30,8 @@
                 right: 50px;
                 z-index: -1;
                 -webkit-mask-image: url('/local/templates/meladapt/assets/images/cloud.png');
+                -webkit-mask-size: contain;
+                -webkit-mask-repeat: no-repeat;
             }
             &:nth-child(2) {
                 position: relative;
@@ -141,6 +143,22 @@
         padding: 18px 42px;
         display: block;
         margin-right: 14px;
+    }
+
+    @include media('md-max') {
+        &_main {
+            .questions__bg {
+                max-width: 18%;
+            }
+        }
+    }
+
+    @include media('sm-max') {
+        &_main {
+            .questions__bg {
+                display: none;
+            }
+        }
     }
 
     @include media('xs') {

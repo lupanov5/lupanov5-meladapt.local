@@ -28,7 +28,7 @@
                     <div class="list__head list__head_shop">
                         <img src="/local/templates/meladapt/assets/images/shop-3.png" alt="shop">
                     </div>
-                    <div class="list__title list__title_shop">Яндекс.Маркет</div>
+                    <div class="list__title list__title_shop">Яндекс. Маркет</div>
                 </a>
             </li>
             <li class="list__item list__item_shop">

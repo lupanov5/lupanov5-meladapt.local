@@ -8,6 +8,7 @@
     }
     &__bg {
         position: absolute;
+        z-index: -1;
         img {
             &:nth-child(1) {
                 position: relative;
@@ -26,11 +27,14 @@
                 top: -21%;
                 right: 57%;
                 width: 76%;
+                object-fit: contain;
+                mask-image: url("/local/templates/meladapt/assets/images/cloud-r.png");
+                mask-size: contain;
+                mask-repeat: no-repeat;
             }
         }
     }
-
-    &__container {
+    &__content {
         max-width: 50%;
         margin-left: auto;
         margin-right: 0;
@@ -42,12 +46,33 @@
         flex-wrap: wrap;
         gap: 40px;
         .feat__item {
-            max-width: 250px;
+            max-width: calc(50% - 40px);
+            margin-right: 0;
         }
     }
     .promo__head {
         h1 {
             margin-bottom: 10px;
+        }
+    }
+
+    @include media('md-max') {
+        &__feat {
+            .feat__item {
+                max-width: 200px;
+            }
+        }
+    }
+
+    @include  media('sm-max') {
+        &__feat {
+            .feat__item {
+                max-width: 100%;
+            }
+            .feat__img {
+                height: 50px;
+                width: 70px;
+            }
         }
     }
 }

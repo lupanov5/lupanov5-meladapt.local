@@ -87,8 +87,9 @@
     </div>
 </footer>
 
-</div>
 
+</div>
+<?php require_once './blocks/modal.php'; ?>
 <script src="/local/templates/meladapt/assets/app.min.js"></script>
 </body>
 </html>

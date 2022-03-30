@@ -1,9 +1,10 @@
 <section class="danger">
 
-    <div class="danger__bg">
-        <img src="/local/templates/meladapt/assets/images/danger-bg.png" alt="">
-    </div>
     <div class="container danger__container">
+
+        <div class="danger__bg">
+            <img src="/local/templates/meladapt/assets/images/danger-bg.png" alt="">
+        </div>
 
         <div class="danger__block">
             <div class="danger__item">

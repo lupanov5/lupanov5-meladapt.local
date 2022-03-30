@@ -9,16 +9,39 @@
         top: 0;
         height: 100%;
         right: 0;
-        background: linear-gradient(180deg, #142534 0%, rgba(20, 37, 52, 0) 6.77%), linear-gradient(360deg, #132434 17.6%, rgba(19, 36, 52, 0) 63.05%), linear-gradient(90deg, #132434 0%, rgba(19, 36, 52, 0) 35.45%);
+        z-index: -1;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, #142534 0%, rgba(20, 37, 52, 0) 6.77%), linear-gradient(360deg, #132434 17.6%, rgba(19, 36, 52, 0) 63.05%), linear-gradient(90deg, #132434 0%, rgba(19, 36, 52, 0) 35.45%), linear-gradient(0deg, #132434 0%, rgba(19, 36, 52, 0) 35.45%);
+            z-index: 1;
+        }
         img {
             height: 100%;
+            object-fit: cover;
+
         }
     }
     &__bg-left {
         position: absolute;
         top: 0;
         height: 100%;
-        right: 22%;
+        right: 35%;
+        z-index: -2;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -170px;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, #142534 0%, rgba(20, 37, 52, 0) 6.77%), linear-gradient(360deg, #132434 17.6%, rgba(19, 36, 52, 0) 63.05%), linear-gradient(90deg, #132434 0%, rgba(19, 36, 52, 0) 35.45%);
+            z-index: 1;
+        }
         img {
             height: 100%;
             &:nth-child(1) {
@@ -91,6 +114,28 @@
     &__btn {
         margin-right: 35px;
         padding: 18px 46px;
+    }
+
+    @include media('sm-max') {
+        &__head {
+            h1 {
+                font-size: 90px;
+            }
+        }
+        &__product {
+            max-width: 480px;
+        }
+        &__feat {
+            .feat__item {
+                margin-right: 15px;
+            }
+            .feat__text {
+                font-size: 14px;
+            }
+        }
+        .promo__btn {
+            padding: 14px 36px;
+        }
     }
 }
 

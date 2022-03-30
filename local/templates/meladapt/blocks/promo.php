@@ -1,13 +1,13 @@
 <section class="promo">
 
-    <div class="promo__bg-right">
-        <img src="/local/templates/meladapt/assets/images/bg.png" alt="">
-    </div>
-    <div class="promo__bg-left">
-        <img src="/local/templates/meladapt/assets/images/promo-1.png" alt="">
-        <img src="/local/templates/meladapt/assets/images/promo-2.png" alt="">
-    </div>
     <div class="container">
+        <div class="promo__bg-right">
+            <img src="/local/templates/meladapt/assets/images/bg.jpg" alt="">
+        </div>
+        <div class="promo__bg-left">
+            <img src="/local/templates/meladapt/assets/images/promo-1.png" alt="">
+            <img src="/local/templates/meladapt/assets/images/promo-2.png" alt="">
+        </div>
         <div class="promo__head">
             <h1 class=promo__title">Плохо cпите? <span>Бессонница?</span></h1>
         </div>

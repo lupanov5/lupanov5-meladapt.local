@@ -30,7 +30,7 @@ class ShowModal{
     //Method for all actions
     bindsEvent(){
         this.$modalBtn.forEach((el) => {
-           el.addEventListener('click', this.showModal.bind(this));
+            el.addEventListener('click', this.showModal.bind(this));
         });
     }
     showModal(e) {
@@ -39,7 +39,7 @@ class ShowModal{
         let $self = e.currentTarget,
             type = $self.getAttribute(`data-custom-open`),
             $modal = document.querySelector(`#${type}`);
-            let inputId = $modal.querySelector(`[data-${this.attrs.id}]`);
+        let inputId = $modal.querySelector(`[data-${this.attrs.id}]`);
         inputId.value = $self.getAttribute(`data-${this.attrs.id}`);
     }
 }

@@ -1,6 +1,6 @@
 <section class="container questions">
     <div class="questions__decor">
-        <img src="/local/templates/meladapt/assets/images/КВ.png" alt="">
+        <img src="/local/templates/meladapt/assets/images/КВ.jpg" alt="">
         <img src="/local/templates/meladapt/assets/images/decor0.png" alt="">
         <img src="/local/templates/meladapt/assets/images/decor1.png" alt="">
         <img src="/local/templates/meladapt/assets/images/decor2.png" alt="">
@@ -61,7 +61,7 @@
         </ul>
 
         <div class="questions__buttons">
-            <a href="" class="btn questions__btn"><span>Задать вопрос</span></a>
+            <a href="" data-custom-open="question" class="btn questions__btn"><span>Задать вопрос</span></a>
         </div>
     </div>
 </section>

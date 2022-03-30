@@ -37,4 +37,13 @@
             opacity: 0.8;
         }
     }
+
+    @include media('sm-max') {
+        &__head {
+            &_shop {
+                height: 80px;
+                width: 80px;
+            }
+        }
+    }
 }

@@ -1,10 +1,11 @@
 <section class="whom">
 
-    <div class="whom__bg">
-        <img src="/local/templates/meladapt/assets/images/whom-bg1.png" alt="">
-        <img src="/local/templates/meladapt/assets/images/whom-bg2.png" alt="">
-    </div>
     <div class="container whom__container">
+
+        <div class="whom__bg">
+            <img src="/local/templates/meladapt/assets/images/man.jpg" alt="">
+            <img src="/local/templates/meladapt/assets/images/whom-bg2.png" alt="">
+        </div>
 
         <div class="whom__head">
             <h1 class=whom__title">Кому подойдет?</h1>

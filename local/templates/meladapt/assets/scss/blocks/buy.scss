@@ -28,4 +28,20 @@
             border-bottom: 1px solid rgba(32, 43, 86, 1);
         }
     }
+
+    @include media('sm-max') {
+        &__head {
+            h1 {
+                font-size: 90px;
+            }
+        }
+        &__list {
+            .list__item_link {
+                padding: 20px;
+            }
+            .list__title {
+                font-size: 16px;
+            }
+        }
+    }
 }

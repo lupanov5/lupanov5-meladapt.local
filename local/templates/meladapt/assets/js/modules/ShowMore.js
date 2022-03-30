@@ -85,9 +85,10 @@ class ShowMore{
             $item.classList.remove('disabled');
             this.$contentBox.insertAdjacentHTML( 'beforeend', res.html)
 
-
             if (!res.isEnd) {
-                $item.setAttribute(`data-${this.dataName.button}`, data.page + 1);
+                if (res.url) {
+                    $item.setAttribute(`data-${this.dataName.actionUrl}`, res.url);
+                }
             } else {
                 $item.setAttribute(`data-${this.dataName.button}`, data.page + 1);
 

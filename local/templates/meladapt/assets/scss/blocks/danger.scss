@@ -4,12 +4,13 @@
     position: relative;
     &__bg {
         position: absolute;
-        top: -56%;
+        top: -40%;
         z-index: -1;
-        max-width: 76%;
+        max-width: 70%;
         right: -22%;
     }
     &__container {
+        position: initial;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -38,7 +39,7 @@
         align-items: center;
         padding-left: 20px;
         padding-right: 20px;
-        width: 170px;
+        width: calc(33% - 30px);
         margin-right: 0px;
         margin-bottom: 35px;
     }
@@ -55,5 +56,39 @@
         line-height: 110%;
         text-align: center;
         color: $c-blue;
+    }
+
+    @include media('md-max') {
+        &__img {
+            height: 75px;
+            width: 75px;
+        }
+    }
+
+    @include media('sm-max') {
+        &__container {
+            flex-direction: column;
+        }
+        &__bg {
+            display: none;
+        }
+        &__head {
+            order: 1;
+            margin-bottom: 40px;
+            h1 {
+                font-size: 90px;
+            }
+        }
+        &__block {
+            order: 2;
+            max-width: initial;
+            justify-content: center;
+            gap: 20px;
+        }
+        &__img {
+            height: 75px;
+            width: 75px;
+            margin-bottom: 15px;
+        }
     }
 }

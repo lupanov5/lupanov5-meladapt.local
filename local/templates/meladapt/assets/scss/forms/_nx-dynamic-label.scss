@@ -5,18 +5,28 @@
         position: absolute;
         top: 17px;
         left: 20px;
-        font-size: $fz-min;
-        color: map_get($input, placeholder-color);
-        line-height: 1;
         transition: all .15s $tr-type;
         pointer-events: none;
         transform-origin: left;
         z-index: 20;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        color: #202B56;
+        opacity: 0.3;
         @include truncate(91%);
     }
 
     .nx-dynamic-label__input{
-        //height: map_get($input, placeholder-color);
+        border: 1px solid #E4E4E4;
+        box-sizing: border-box;
+        border-radius: 15px;
+        flex: none;
+        order: 1;
+        align-self: stretch;
+        flex-grow: 0;
+        margin: 10px 0px;
+        width: 100%;
         padding: 17px 20px 6px;
     }
 

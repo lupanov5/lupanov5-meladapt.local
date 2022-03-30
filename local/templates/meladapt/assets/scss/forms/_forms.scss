@@ -44,7 +44,7 @@
 }
 
 textarea, textarea.nx-form-element{
-    height: auto;
+    height: 100px;
     min-height: map_get($textarea, height);
     max-width: 100%;
     max-height: map_get($textarea, max-height);
@@ -115,6 +115,13 @@ select{
         margin-top: 5px;
         color: rgba($c-dark, .5);
         font-size: $fz-little;
+    }
+    &__text {
+        color: #202B56;
+        opacity: 0.6;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 140%;
     }
     &.error{
         input, textarea, select{

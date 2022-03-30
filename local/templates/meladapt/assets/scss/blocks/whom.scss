@@ -4,6 +4,8 @@
     position: relative;
     &__bg {
         position: absolute;
+        right: 0;
+        z-index: -1;
         img {
             &:nth-child(1) {
                 width: 90%;
@@ -11,6 +13,10 @@
                 right: -32%;
                 top: -20%;
                 z-index: 1;
+                object-fit: contain;
+                mask-image: url("/local/templates/meladapt/assets/images/cloud-c.png");
+                mask-size: contain;
+                mask-repeat: no-repeat;
             }
             &:nth-child(2) {
                 width: 67%;
@@ -50,6 +56,13 @@
             border: 1px solid rgba(32, 43, 86, 0.1);
             border-radius: 50%;
             margin-right: 10px;
+        }
+    }
+    @include media('sm-max') {
+        &__head {
+            h1 {
+                font-size: 90px;
+            }
         }
     }
 }
