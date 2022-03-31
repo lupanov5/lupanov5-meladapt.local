@@ -18,6 +18,9 @@
     }
 
     .nx-dynamic-label__input{
+        color: $c-blue;
+        font-size: 14px;
+        line-height: 140%;
         border: 1px solid #E4E4E4;
         box-sizing: border-box;
         border-radius: 15px;
@@ -34,6 +37,9 @@
         .nx-dynamic-label__text{
             transform: translateY(-9px);
             font-size: $fz-little;
+        }
+        .nx-dynamic-label__input {
+            border: 1px solid #EFC53D;
         }
     }
     .error &{

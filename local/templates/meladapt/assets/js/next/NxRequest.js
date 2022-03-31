@@ -16,8 +16,6 @@ class NxRequest {
             success: "success",
             preloaderTheme: "btn",
             modal: "modal",
-            modalOkVacancies: "#modal-vacancies-ok",
-            modalServicesOk: '#modal-services-ok',
             modalOk: "#modal-ok"
         };
 

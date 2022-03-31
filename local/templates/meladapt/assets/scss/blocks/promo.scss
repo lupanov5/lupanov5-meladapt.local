@@ -1,5 +1,4 @@
 .promo  {
-    transform: translateY(-80px);
     padding-top: 90px;
     padding-bottom: 50px;
     background-color: #132434;
@@ -31,7 +30,7 @@
         top: 0;
         height: 100%;
         right: 35%;
-        z-index: -2;
+        z-index: -1;
         &:after {
             content: '';
             position: absolute;
@@ -44,6 +43,7 @@
         }
         img {
             height: 100%;
+            object-fit: contain;
             &:nth-child(1) {
                 position: relative;
                 left: -25%;
@@ -135,6 +135,71 @@
         }
         .promo__btn {
             padding: 14px 36px;
+        }
+    }
+
+    @include media('xs') {
+        padding-top: 210px;
+        &__bg-right {
+            top: -250px;
+            img {
+                object-fit: contain;
+            }
+        }
+        &__bg-left {
+            top: -210px;
+            height: 100%;
+            right: 0%;
+            img {
+                &:nth-child(1) {
+                    left: 0%;
+                    height: 100%;
+                    top: 9%;
+                }
+                &:nth-child(2) {
+                    left: 0%;
+                    height: 100%;
+                    top: 10%;
+                }
+            }
+        }
+        &__head {
+            max-width: 280px;
+            margin: 0 auto 15px;
+            h1 {
+                font-size: 60px;
+                text-align: center;
+            }
+        }
+        &__product {
+            max-width: 320px;
+            margin: 0 auto 15px;
+        }
+        &__feat {
+            flex-direction: column;
+            margin-bottom: 25px;
+            .feat__item {
+                max-width: 100%;
+                margin-right: 0;
+                margin-bottom: 20px;
+                align-items: center;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            .feat__img {
+                height: 30px;
+                width: 30px;
+                margin-right: 10px;
+            }
+        }
+        &__bottom {
+            flex-direction: column;
+        }
+        &__btn {
+            margin-right: 0;
+            width: 100%;
+            margin-bottom: 12px;
         }
     }
 }

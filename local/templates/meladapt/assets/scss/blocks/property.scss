@@ -24,4 +24,26 @@
             }
         }
     }
+
+    @include media('xs') {
+        padding-top: 30px;
+        padding-bottom: 35px;
+        &__list {
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .list__item {
+            padding: 15px 5px;
+            margin: 0;
+            width: calc(50% - 5px);
+        }
+        .list__head {
+            margin-bottom: 25px;
+            height: 30px;
+            width: 30px;
+        }
+        .list__title {
+            font-size: 14px;
+        }
+    }
 }

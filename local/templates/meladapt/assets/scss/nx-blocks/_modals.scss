@@ -148,11 +148,19 @@
         align-items: center;
         z-index: 500;
     }
+
+    &__wrapper {
+        max-width: 460px;
+        position: relative;
+        @include media('xs') {
+            max-width: 290px;
+        }
+    }
     
     &__container {
         background-color: #fff;
         padding: 30px;
-        max-width: 460px;
+        width: 100%;
         max-height: 100vh;
         border-radius: 30px;
         overflow-y: auto;
@@ -180,18 +188,20 @@
     }
     
     &__close {
-        background: transparent;
-        border: 0;
+        background: white;
+        border-radius: 50%;
         display: block;
         position: absolute;
-        right: 20px; top: 15px;
-        font-size: map_get($modal, close-size);
-        width: map_get($modal, close-size);
-        height: map_get($modal, close-size);
+        right: -60px;
+        top: 0px;
+        width: 45px;
+        height: 45px;
         line-height: 1;
         z-index: 100;
         opacity: 1;
-        fill: map_get($button, close-color);
+        fill: #2D2D2D;
+        padding: 9px;
+        font-size: 28px;
         .link-icon{
             width: 22px;
             height: 22px;
@@ -201,11 +211,15 @@
             fill: map_get($button, close-hover);
             opacity: 1;
         }
+        @include media('xs') {
+            right: 0;
+            top: -55px;
+        }
     }
     
     &__btn {
         font-size: .875rem;
-        color: rgba(0,0,0,.8);
+        color: white;
         border-style: none;
         border-width: 0;
         cursor: pointer;
@@ -224,12 +238,26 @@
         height: 60px;
         left: 30px;
         top: 476px;
-        background: #E4E4E4;
+        background: #202B56;
         border-radius: 15px;
         flex: none;
         order: 2;
         align-self: stretch;
         flex-grow: 0;
+        &:hover {
+            background: $c-orange;
+            color: $c-blue;
+        }
+        &#{&}.disabled {
+            color: rgba(0,0,0,.8);
+            background: #E4E4E4;
+        }
+        @include media('xs') {
+            padding: 15px;
+            width: 260px;
+            height: 45px;
+            left: 30px;
+        }
     }
 }
 

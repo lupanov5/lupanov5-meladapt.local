@@ -53,16 +53,52 @@
             width: 40px;
             height: 40px;
             padding: 10px;
+            flex-shrink: 0;
             border: 1px solid rgba(32, 43, 86, 0.1);
             border-radius: 50%;
             margin-right: 10px;
         }
     }
+
     @include media('sm-max') {
         &__head {
             h1 {
                 font-size: 90px;
             }
+        }
+    }
+
+    @include media('xs') {
+        padding-top: 210px;
+        padding-bottom: 10px;
+        &__bg {
+            right: 0;
+            top: -270px;
+            max-width: 500px;
+            img {
+                &:nth-child(1) {
+                    width: 100%;
+                    right: 0;
+                    top: 0;
+                }
+                &:nth-child(2) {
+                    width: 100%;
+                    right: 0;
+                    top: -10px;
+                }
+            }
+        }
+        &__head {
+            max-width: 320px;
+            margin-bottom: 30px;
+            h1 {
+                font-size: 60px;
+                text-align: center;
+            }
+        }
+        &__item {
+            font-size: 14px;
+            margin-bottom: 15px;
         }
     }
 }

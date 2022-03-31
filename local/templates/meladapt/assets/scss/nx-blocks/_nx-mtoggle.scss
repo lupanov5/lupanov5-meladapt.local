@@ -21,9 +21,9 @@
     &__icon{
         display: block;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-left: map_get($mtoggle, width)/-2;
+        top: 73%;
+        left: 45%;
+        margin-left: 0;
         margin-top: map_get($mtoggle, height)/-2;
         background-color: white;
         transition: all $tr-time $tr-type;
@@ -31,21 +31,22 @@
         width: map_get($mtoggle, width);
         border-radius: $brd-rad-main;
         user-select: none;
-        &:after, &:before{
-            content: "";
+        &:before, &:after{
             display: inherit;
             position: inherit;
             top: 0;
+            right: 0;
             background-color: inherit;
             height: inherit;
             border-radius: inherit;
-            width: 100%;
             transition: width $tr-time $tr-type;
         }
         &:after{
             margin-top: map_get($mtoggle, distanceBetween);
         }
         &:before{
+            content: "";
+            width: 60%;
             margin-top: -#{map_get($mtoggle, distanceBetween)};
         }
     }
@@ -71,6 +72,7 @@
                 transition: all $tr-time $tr-type;
             }
             &:after{
+                content: "";
                 top: 0;
                 transform: rotate(45deg);
             }

@@ -44,4 +44,46 @@
             }
         }
     }
+
+    @include media('xs') {
+        padding-top: 35px;
+        &__head {
+            margin: 0 auto 30px;
+            max-width: 320px;
+            h1 {
+                font-size: 60px;
+                text-align: center;
+            }
+        }
+        &__subtitle {
+            opacity: 0.6;
+            font-size: 14px;
+            text-align: center;
+        }
+        &__list {
+            gap: 10px;
+            margin-bottom: 25px;
+            .list__item {
+                width: calc(50% - 5px);
+            }
+            .list__item_link {
+                padding: 12px;
+            }
+            .list__head_shop {
+                height: 60px;
+                width: 60px;
+            }
+            .list__title {
+                font-size: 14px;
+            }
+        }
+        &__show {
+            display: block;
+            max-width: fit-content;
+            margin: 0 auto;
+            span {
+                border-bottom: 2px dashed rgba(32, 43, 86, 0.4);
+            }
+        }
+    }
 }

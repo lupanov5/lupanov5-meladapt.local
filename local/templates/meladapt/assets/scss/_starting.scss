@@ -41,6 +41,7 @@ body{
         }
     }
     &__content{
+        transform: translateY(-80px);
         flex: 1 0 auto;
         overflow: hidden;
         min-width: 0;
@@ -48,11 +49,13 @@ body{
     }
     @include media('sm-min', 'sm-max'){
         &__content{
+            transform: translateY(-70px);
             padding-top: map_get($header, height-sm);
         }
     }
     @include media('xs'){
         &__content{
+            transform: translateY(-40px);
             padding-top: map_get($header, height-xs);
         }
     }
