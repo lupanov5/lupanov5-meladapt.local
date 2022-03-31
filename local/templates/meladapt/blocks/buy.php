@@ -1,4 +1,4 @@
-<section class="buy">
+<section id="buy" class="buy">
     <div class="container buy__container">
 
         <div class="buy__head">

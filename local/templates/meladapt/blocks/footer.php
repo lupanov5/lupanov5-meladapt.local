@@ -89,8 +89,7 @@
 
 
 </div>
-<?php require_once './blocks/modal.php'; ?>
-<?php require_once './blocks/modal-ok.php'; ?>
+
 <script src="/local/templates/meladapt/assets/app.min.js"></script>
 </body>
 </html>

@@ -64,7 +64,7 @@
                                     </a>
                                 </li>
 
-                                <a href="#" class="btn btn_brd mnav__btn">Где купить</a>
+                                <a href="#buy" class="btn btn_brd mnav__btn">Где купить</a>
 
 
 

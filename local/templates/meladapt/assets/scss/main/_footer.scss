@@ -4,12 +4,12 @@
     z-index: 1;
     &__wrap{
         position: relative;
-        padding-top: 160px;
+        padding-top: 80px;
         padding-bottom: 20px;
     }
     &__bg {
         position: absolute;
-        top: -80px;
+        top: -160px;
         left: calc(50% - 430px);
         width: 860px;
     }
@@ -127,7 +127,7 @@
 
     @include media('xs') {
         &__bg {
-            top: -35px;
+            top: -73px;
             left: calc(50% - 180px);
             width: 360px;
         }
