@@ -75,7 +75,7 @@ ob_end_clean();
 
 echo json_encode([
     'isEnd' => $COUNTREC - ($PAGEN_1 * BUY_SHOWBY) <= 0,
-    'url' => "/request/index.php?PAGEN_1=" . ++$PAGEN_1,
+    'url' => "/request/index.php?PAGEN_1=" . ++$PAGEN_1 . '&COUNTREC=' . $COUNTREC,
     'html' => $html,
 ]);
 exit;

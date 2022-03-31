@@ -2,7 +2,7 @@
 
 
 /* Кол-во выводимых элементов на странице услуги (ajax) */
-const BUY_SHOWBY = 2;
+const BUY_SHOWBY = 8;
 
 //const SITE_URL = 'http://export60.ru/';
 //const SITE_URL_CLEAN = 'http://export60.ru';
