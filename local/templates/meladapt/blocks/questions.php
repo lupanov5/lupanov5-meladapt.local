@@ -1,9 +1,9 @@
 <section class="container questions">
     <div class="questions__decor">
         <img src="/local/templates/meladapt/assets/images/КВ.jpg" alt="">
-        <img src="/local/templates/meladapt/assets/images/decor0.png" alt="">
-        <img src="/local/templates/meladapt/assets/images/decor1.png" alt="">
-        <img src="/local/templates/meladapt/assets/images/decor2.png" alt="">
+        <img src="/local/templates/meladapt/assets/images/melatonin-bg-1.png" alt="">
+        <img src="/local/templates/meladapt/assets/images/melatonin-bg-2.png" alt="">
+        <img src="/local/templates/meladapt/assets/images/promo-1.png" alt="">
     </div>
     <div class="content-narrow">
         <div class="questions__title">

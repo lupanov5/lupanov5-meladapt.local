@@ -1,35 +1,70 @@
-<div class="container">
-    <section class="email">
-        <div class="email__img" style="background-image: url('/local/templates/meladapt/assets/images/bg.jpg')">
-            <a href="/" class="brand">
-                <img src="/local/templates/meladapt/assets/images/logo.png""
-                     class="brand__img">
-            </a>
+<section style="height: 340px;
+                padding-top: 60px;
+                padding-bottom: 60px;
+                max-width: 1200px;">
+    <div style="height: 340px;
+    width: 680px;
+    margin: 0 auto 40px;
+    border-radius: 30px;
+    background-position: center;
+    background-size: cover;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    background-image: url('/local/templates/meladapt/assets/images/bg.jpg')">
+        <a href="#" style="width: 220px;
+                    display: block;
+                    margin-bottom: 150px;
+                        height: initial;">
+            <img style="object-fit: contain;
+                    display: block;
+                    max-width: 100%;" src="/local/templates/meladapt/assets/images/logo.png">
+        </a>
 
-            <div class="promo__product">
-                <div class="inner">
-                    <img src="/local/templates/meladapt/assets/images/product.png" alt="">
-                </div>
+        <div style="max-width: 370px;">
+            <div class="inner">
+                <img style="object-fit: contain;
+                                display: block;
+                                max-width: 100%;" src="/local/templates/meladapt/assets/images/product.png" alt="">
             </div>
         </div>
+    </div>
 
-        <h2 class="email__title">
-            Ваш вопрос принят
-        </h2>
-        <div class="email__text">
-            Блок текста с основным посылом рассылки, отвечающий на вопрос что произошло и что делать дальше. Например, о том, что теперь надо ждать звонок менеджера, который позвонит в течение
-            24 часов
-        </div>
+    <h2 style="margin: 0 auto 15px;
+                text-align: center;
+font-weight: 700;
+font-size: 30px;
+line-height: 35px;
+color: #202B56;">
+        Ваш вопрос принят
+    </h2>
+    <div style="max-width: 520px;
+                                    margin: 0 auto 30px;
+                                    text-align: center;
+                                    opacity: 0.5;">
+        Блок текста с основным посылом рассылки, отвечающий на вопрос что произошло и что делать дальше. Например, о том, что теперь надо ждать звонок менеджера, который позвонит в течение
+        24 часов
+    </div>
 
-        <div class="email__btn">
-            <a class="btn btn_lt">Вернуться на сайт</a>
-        </div>
+    <div style="text-align: center;
+                                    margin-bottom: 50px;">
+        <a style="background-color: $c-blue;
+            color: white;">Вернуться на сайт</a>
+    </div>
 
-        <div class="email__bottom">
-            <a href="#" class="email__bottom_item"><span>Отписаться от рассылки</span></a>
-            <div class="email__bottom_item" >© Меладапт</div>
-            <div class="email__bottom_item" >18+</div>
-        </div>
+    <div style="display: flex;
+                justify-content: center;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 140%;
+                text-align: center;
+                opacity: 0.8;
+                color: #000000">
+        <a href="#" style="margin-right: 20px;
+color: #000000;
+opacity: 0.8;"><span>Отписаться от рассылки</span></a>
+        <div style="margin-right: 20px;">© Меладапт</div>
+        <div>18+</div>
+    </div>
 
-    </section>
-</div>
+</section>
