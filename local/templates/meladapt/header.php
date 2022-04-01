@@ -20,7 +20,7 @@ $asset->addString(
 $asset->addCss(SITE_TEMPLATE_PATH . '/assets/vendor.css');
 $asset->addCss(SITE_TEMPLATE_PATH . '/assets/app.min.css');
 $asset->addJs(SITE_TEMPLATE_PATH . '/assets/app.min.js', true);
-$header = \dnext\Models\Home\Settings::instance()->getFirstCached();
+$header = \dnext\Models\Home\Settings::instance()->getFirstElement();
 ?>
 <!DOCTYPE HTML>
 <html lang="<?= LANGUAGE_ID ?>">
@@ -53,15 +53,15 @@ $header = \dnext\Models\Home\Settings::instance()->getFirstCached();
                     <span class="mtoggle__icon"></span>
                 </a>
             </div>
-
-            <div class="header__brand">
-                <a href="/" class="brand">
-                    <img src="<?= \dnext\Helpers\FilesHelper::getImageById($header['LOGOTYPE_HEADER']['VALUE']) ?>"
-                         alt="{$smarty.const.SITE_NAME}"
-                         class="brand__img">
-                </a>
-            </div>
-
+            <?php if (!empty($header['LOGOTYPE_HEADER']['VALUE'])): ?>
+                <div class="header__brand">
+                    <a href="/" class="brand">
+                        <img src="<?= \dnext\Helpers\FilesHelper::getImageById($header['LOGOTYPE_HEADER']['VALUE']) ?>"
+                             alt="{$smarty.const.SITE_NAME}"
+                             class="brand__img">
+                    </a>
+                </div>
+            <?php endif; ?>
             <div class="spacer"></div>
 
             <div class="header__nav">
@@ -70,10 +70,10 @@ $header = \dnext\Models\Home\Settings::instance()->getFirstCached();
                         <div class="mnav__menu">
                             <ul class="main-menu">
 
-                                <?$APPLICATION->IncludeComponent(
+                                <? $APPLICATION->IncludeComponent(
                                     "bitrix:menu",
                                     "top",
-                                    Array(
+                                    array(
                                         "ALLOW_MULTI_SELECT" => "N",
                                         "CHILD_MENU_TYPE" => "",
                                         "DELAY" => "N",
@@ -85,12 +85,12 @@ $header = \dnext\Models\Home\Settings::instance()->getFirstCached();
                                         "ROOT_MENU_TYPE" => "top",
                                         "USE_EXT" => "N"
                                     )
-                                );?>
+                                ); ?>
 
-
-                                <a href="/#buy" class="btn btn_brd mnav__btn"><?= $header['BUTTON_TEXT_HEADER']['VALUE'] ?></a>
-
-
+                                <?php if ($header['CHECKBOX_BUY']['VALUE']): ?>
+                                    <a href="/#buy"
+                                       class="btn btn_brd mnav__btn"><?= $header['BUTTON_TEXT_HEADER']['VALUE'] ?></a>
+                                <?php endif; ?>
 
                             </ul>
 

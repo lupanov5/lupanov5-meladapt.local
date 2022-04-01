@@ -7,7 +7,7 @@ const BUY_SHOWBY = 8;
 //const SITE_URL = 'http://export60.ru/';
 //const SITE_URL_CLEAN = 'http://export60.ru';
 //// Email
-//const LOGO = '/local/templates/export60/assets/images/header/logo.png';
+const LOGO = '/local/templates/meladapt/assets/images/logo.png';
 //
 
 

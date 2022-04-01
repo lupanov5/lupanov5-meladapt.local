@@ -3,7 +3,7 @@
 /**
  * @global CMain $APPLICATION
  */
-$footer = \dnext\Models\Home\Settings::instance()->getFirstCached();
+$footer = \dnext\Models\Home\Settings::instance()->getFirstElement();
 $feedback = \dnext\Models\Feedback\Settings::instance()->getFirstElement();
 ?>
 <footer class="footer">
@@ -32,7 +32,8 @@ $feedback = \dnext\Models\Feedback\Settings::instance()->getFirstElement();
                             "MENU_CACHE_TYPE" => "N",
                             "MENU_CACHE_USE_GROUPS" => "Y",
                             "ROOT_MENU_TYPE" => "bottom",
-                            "USE_EXT" => "N"
+                            "USE_EXT" => "N",
+                            "CHECKBOX" => $footer['CHECKBOX_BUY']['VALUE'],
                         )
                     );?>
                 </ul>
