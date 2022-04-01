@@ -34,8 +34,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 
         <div class="questions__buttons">
             <?php if (!empty($arResult['SETTINGS_PAGE']['TEXT_BUTTON_1_QUESTION']['VALUE'])): ?>
-                <a href="#"
-                   class="btn questions__btn"><span><?= $arResult['SETTINGS_PAGE']['TEXT_BUTTON_1_QUESTION']['VALUE'] ?></span></a>
+                <button
+                   class="btn questions__btn" data-custom-open="question"><span><?= $arResult['SETTINGS_PAGE']['TEXT_BUTTON_1_QUESTION']['VALUE'] ?></span></button>
             <?php endif; ?>
             <?php if (!empty($arResult['SETTINGS_PAGE']['TEXT_BUTTON_2_QUESTION']['VALUE'])): ?>
                 <a href="/questions/"

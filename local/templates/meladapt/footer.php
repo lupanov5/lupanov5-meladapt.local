@@ -4,6 +4,7 @@
  * @global CMain $APPLICATION
  */
 $footer = \dnext\Models\Home\Settings::instance()->getFirstCached();
+$feedback = \dnext\Models\Feedback\Settings::instance()->getFirstElement();
 ?>
 <footer class="footer">
     <div class="footer__bg">
@@ -36,44 +37,52 @@ $footer = \dnext\Models\Home\Settings::instance()->getFirstCached();
                     );?>
                 </ul>
             </div>
+            <?php if (!empty($footer['FILE_PROMO']['VALUE']) && !empty($footer['TEXT_LINK_INSTRUCTION_FOOTER']['VALUE'])): ?>
             <a href="<?= \dnext\Helpers\FilesHelper::getImageById($footer['FILE_PROMO']['VALUE']) ?>" class="flex-col md-6 sm-24 link footer__instruction">
                 <?= $footer['TEXT_LINK_INSTRUCTION_FOOTER']['VALUE'] ?></a>
+            <?php endif; ?>
             <div class="flex-col md-24 footer__warning">
                 <?= $footer['TEXT_LINK_CONTRA_FOOTER']['VALUE'] ?>
                 <!--<img src="/local/templates/meladapt/assets/images/warning.png" alt="">-->
             </div>
         </div>
         <div class="footer__middle">
+            <?php if (!empty($footer['LOGOTYPE_2_FOOTER']['VALUE'])): ?>
             <div class="footer__shop">
                 <img alt="ozon" src="<?= \dnext\Helpers\FilesHelper::getImageById($footer['LOGOTYPE_2_FOOTER']['VALUE']) ?>">
             </div>
+            <?php endif; ?>
             <div class="footer__contacts">
+                <?php if (!empty($footer['PHONE_FOOTER']['VALUE'])): ?>
                 <div class="nx-contacts__item">
                     <div class="nx-contacts__label">
                         <?= $footer['PHONE_TITLE_FOOTER']['VALUE'] ?>
                     </div>
                     <a href="tel:<?= \dnext\Helpers\Generic::getCleanPhoneNumber($footer['PHONE_FOOTER']['VALUE']) ?>" class="nx-contacts__title"><?= $footer['PHONE_FOOTER']['VALUE'] ?></a>
                 </div>
+                <?php endif; ?>
+                <?php if (!empty($footer['EMAIL_FOOTER']['VALUE'])): ?>
                 <div class="nx-contacts__item">
                     <div class="nx-contacts__label">
                         <?= $footer['EMAIL_TITLE_FOOTER']['VALUE'] ?>
                     </div>
                     <a href="mailto:<?= $footer['EMAIL_FOOTER']['VALUE'] ?>" class="nx-contacts__title"><?= $footer['EMAIL_FOOTER']['VALUE'] ?></a>
                 </div>
+                <?php endif; ?>
+                <?php if (!empty($footer['SITE_FOOTER']['VALUE'])): ?>
                 <div class="nx-contacts__item">
                     <div class="nx-contacts__label">
                         <?= $footer['SITE_TITLE_FOOTER']['VALUE'] ?>
                     </div>
                     <a href="http://<?= $footer['SITE_FOOTER']['VALUE'] ?>" class="nx-contacts__title"><?= $footer['SITE_FOOTER']['VALUE'] ?></a>
                 </div>
+                <?php endif; ?>
             </div>
         </div>
         <div class="footer__bottom">
-            <div class="footer__politics" >
-                © 2021 Фармацевтическая компания «ОЗОН», <a href="#" class="footer__politics link" target="_blank" rel="noopener">
-                    <?= $footer['TEXT_COPYRIGHT_FOOTER']['VALUE'] ?></a>
-            </div>
-            <a href="#" class="footer__link link" target="_blank" rel="noopener"><?= $footer['TEXT_PERSONAL_DATA_FOOTER']['VALUE'] ?></a>
+            <a href="/privacy_policy/" class="footer__politics link" target="_blank" rel="noopener">
+                <?= $footer['TEXT_COPYRIGHT_FOOTER']['VALUE'] ?></a>
+            <a href="/consent/" class="footer__link link" target="_blank" rel="noopener"><?= $footer['TEXT_PERSONAL_DATA_FOOTER']['VALUE'] ?></a>
             <div class="footer__dnext">
                 Разработка сайта — <a href="https://dnext.ru/" class="link" target="_blank" rel="noopener">
                     Next </a>
@@ -81,4 +90,73 @@ $footer = \dnext\Models\Home\Settings::instance()->getFirstCached();
         </div>
     </div>
 </footer>
-<!--<script src="/local/templates/meladapt/assets/app.min.js"></script>-->
+
+
+<div id="question"
+     aria-hidden="true"
+     class="modal micromodal-slide"
+     tabindex="-1">
+    <div class="modal__overlay" tabindex="-1" data-custom-close>
+        <div class="modal__wrapper">
+            <a href="#"
+               class="modal__close"
+               aria-label="Close modal"
+               data-custom-close>
+                <i class="mdi mdi-close"></i>
+            </a>
+            <div class="modal__container" role="dialog" aria-modal="true">
+
+
+                <div class="h5 modal__title"><?= $feedback['TITLE']['VALUE'] ?></div>
+
+                <form action="/request/question.php">
+                    <div class="flex-row">
+                        <div class="flex-col xs-24 form-group" data-form-group>
+                            <span class="form-group__text"><?= $feedback['TITLE_NAME']['VALUE'] ?></span>
+                            <label class="nx-dynamic-label" data-dynamic-label>
+                                <input type="text" class="nx-dynamic-label__input" name="name" data-dynamic-inp>
+                                <span class="nx-dynamic-label__text"><?= $feedback['DESC_NAME']['VALUE'] ?></span>
+                            </label>
+                        </div>
+                        <div class="flex-col xs-24 form-group" data-form-group>
+                            <span class="form-group__text"><?= $feedback['TITLE_EMAIL']['VALUE'] ?></span>
+                            <label class="nx-dynamic-label" data-dynamic-label>
+                                <input type="text" class="nx-dynamic-label__input" name="email" data-dynamic-inp>
+                                <span class="nx-dynamic-label__text"><?= $feedback['DESC_EMAIL']['VALUE'] ?></span>
+                            </label>
+                        </div>
+                        <div class="flex-col xs-24 form-group" data-form-group>
+                            <span class="form-group__text"><?= $feedback['TITLE_COMMENT']['VALUE'] ?></span>
+                            <label class="nx-dynamic-label" data-dynamic-label>
+                            <textarea class="nx-dynamic-label__input" name="comment" rows="1" data-dynamic-inp
+                                      data-autosize-textarea></textarea>
+                                <span class="nx-dynamic-label__text"><?= $feedback['DESC_COMMENT']['VALUE'] ?></span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn modal__btn" data-send-request>
+                            <?= $feedback['TEXT_BUTTON']['VALUE'] ?>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="modal modal--ok micromodal-slide" id="modal-ok" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-custom-close="modal-feedback-ok">
+        <div class="modal__wrapper">
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-feedback-ok-title">
+                <div class="modal__content">
+                    <h2 class="modal__title" id="modal-feedback-ok-title">
+                        <?= $feedback['TITLE_SUCCESS']['VALUE'] ?>
+                    </h2>
+                    <p class="modal__description">
+                        <?= $feedback['DESC_SUCCESS']['VALUE'] ?>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

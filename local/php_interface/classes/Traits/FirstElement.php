@@ -84,8 +84,9 @@ trait FirstElement
         if(!empty($id)) {
             $res = CIBlockElement::GetByID($id);
             if($ar_res = $res->GetNextElement()) {
-                //$element = $ar_res;
-                $element = $ar_res->GetFields()+$ar_res->GetProperties();
+                $propValues = new \Bitrix\Iblock\InheritedProperty\ElementValues($ar_res->fields['IBLOCK_ID'], $ar_res->fields['ID']);
+                $seo = $propValues->getValues();
+                $element = $ar_res->GetFields()+$seo+$ar_res->GetProperties();
             }
         }
 
