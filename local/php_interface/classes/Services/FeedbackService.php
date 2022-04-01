@@ -19,10 +19,7 @@ use dnext\Services\Validator;
 class FeedbackService
 {
     private $modelList = [
-        'service'   => 'dnext\Models\Feedback\ServiceRequest',
         'question'  => 'dnext\Models\Feedback\Questions',
-        'subscribe'  => 'dnext\Models\Feedback\Subscribe',
-        'event'  => 'dnext\Models\Feedback\Event',
     ];
 
     /**

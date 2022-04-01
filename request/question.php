@@ -1,13 +1,14 @@
 <?php
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/main/include/prolog_before.php");
 
-$post = $_POST;
+use dnext\Services\FeedbackService;
 
-echo json_encode([
-    //"company" => "Поле Название компании не может быть пустым.",
-    //"email" => "Поле Email не может быть пустым.",
-    //"name" => "Поле Имя не может быть пустым.",
-    //"inn" => "Поле ИНН не может быть пустым.",
-    //"phone" => "Поле Телефон не может быть пустым.",
-    //"redirect" => '/local/templates/export60/blocks/404.php',
-    //"request_id" => "354-985"
-]);
+        if($model = new FeedbackService('question')) {
+            $response = $model->run();
+        }
+            else {
+        $response = ['error' => 'Отсутствуют необходимые параметры'];
+            }
+
+echo json_encode($response);
+
