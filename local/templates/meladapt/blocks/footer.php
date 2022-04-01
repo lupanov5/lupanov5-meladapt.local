@@ -69,9 +69,11 @@
         </div>
 
         <div class="footer__bottom">
-            <a href="#" class="footer__politics link" target="_blank" rel="noopener">
-                © 2021 Фармацевтическая компания «ОЗОН», <span>Политика о конфиденциальности</span>
-            </a>
+            <div class="footer__politics" >
+                © 2021 Фармацевтическая компания «ОЗОН», <a href="/local/templates/meladapt/pages/politics.php" class="link" target="_blank" rel="noopener">
+                    <span>Политика о конфиденциальности</span>
+                </a>
+            </div>
 
             <a href="#" class="footer__link link" target="_blank" rel="noopener">
                 <span>Согласие на обработку персональных данных</span>

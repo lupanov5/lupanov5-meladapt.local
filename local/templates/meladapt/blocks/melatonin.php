@@ -5,7 +5,7 @@
         <div class="melatonin__bg">
             <img src="/local/templates/meladapt/assets/images/melatonin-bg-1.png" alt="">
             <img src="/local/templates/meladapt/assets/images/melatonin-bg-2.png" alt="">
-            <img src="/local/templates/meladapt/assets/images/melatonin-bg-3.jpg" alt="">
+            <img class="wow-slideRight" data-animate="slideRight" src="/local/templates/meladapt/assets/images/melatonin-bg-3.jpg" alt="">
         </div>
 
         <div class="melatonin__content">
@@ -17,27 +17,27 @@
             </div>
 
             <div class="feat melatonin__feat">
-                <div class="feat__item fadeIn">
+                <div class="feat__item wow-fadeIn" data-animate="fadeIn">
                     <div class="feat__img">
                         <img src="/local/templates/meladapt/assets/images/melatonin-1.png" alt="Features">
                     </div>
                     <div class="feat__text">Помогает бороться
                         с бессонницей</div>
                 </div>
-                <div class="feat__item fadeIn">
+                <div class="feat__item wow-fadeIn" data-animate="fadeIn">
                     <div class="feat__img">
                         <img src="/local/templates/meladapt/assets/images/melatonin-2.png" alt="Features">
                     </div>
                     <div class="feat__text">Нормализует
                         биоритмы</div>
                 </div>
-                <div class="feat__item fadeIn">
+                <div class="feat__item wow-fadeIn" data-animate="fadeIn">
                     <div class="feat__img">
                         <img src="/local/templates/meladapt/assets/images/melatonin-3.png" alt="Features">
                     </div>
                     <div class="feat__text">Способствует восстановлению сил</div>
                 </div>
-                <div class="feat__item fadeIn">
+                <div class="feat__item wow-fadeIn" data-animate="fadeIn">
                     <div class="feat__img">
                         <img src="/local/templates/meladapt/assets/images/melatonin-4.png" alt="Features">
                     </div>

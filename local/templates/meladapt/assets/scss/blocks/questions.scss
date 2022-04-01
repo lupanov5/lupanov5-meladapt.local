@@ -110,6 +110,10 @@
             position: relative;
             cursor: pointer;
             padding-right: 70px;
+            transition: all $tr-time $tr-type;
+            &:hover {
+                transform: scale(1.05);
+            }
             &::before {
                 content: "";
                 position: absolute;

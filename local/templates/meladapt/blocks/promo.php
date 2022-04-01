@@ -19,20 +19,20 @@
         </div>
 
         <div class="promo__feat feat">
-            <div class="feat__item fadeIn">
+            <div class="wow-fadeIn feat__item" data-animate="fadeIn">
                 <div class="feat__img">
                     <img src="/local/templates/meladapt/assets/images/feat-1.png" alt="Features">
                 </div>
                 <div class="feat__text">Обеспечивает быстрое засыпание и полноценный здоровый сон</div>
             </div>
-            <div class="feat__item fadeIn" >
+            <div class="wow-fadeIn feat__item" data-animate="fadeIn">
                 <div class="feat__img">
                     <img src="/local/templates/meladapt/assets/images/feat-2.png" alt="Features">
                 </div>
                 <div class="feat__text">Избавляет от чувства усталости и разбитости
                     при утреннем пробуждении</div>
             </div>
-            <div class="feat__item fadeIn">
+            <div class="wow-fadeIn feat__item" data-animate="fadeIn">
                 <div class="feat__img">
                     <img src="/local/templates/meladapt/assets/images/feat-3.png" alt="Features">
                 </div>

@@ -2,7 +2,7 @@
 
     <div class="container whom__container">
 
-        <div class="whom__bg">
+        <div class="whom__bg wow-slideLeft" data-animate="slideLeft">
             <img src="/local/templates/meladapt/assets/images/man.jpg" alt="">
             <img src="/local/templates/meladapt/assets/images/whom-bg2.png" alt="">
         </div>

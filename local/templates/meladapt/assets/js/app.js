@@ -66,6 +66,7 @@ import PasswordToggle from './modules/PasswordToggle';
 import CompareTable from './modules/CompareTable';
 import CompareHead from './modules/CompareHead';
 import CookiePolicyPopup from "./modules/CookiePolicyPopup";
+import Animate from "./modules/Animate";
 
 Likely.initiate();
 objectFitImages();
@@ -112,3 +113,4 @@ new ShowMore();
 new CompareTable();
 new CompareHead();
 new CookiePolicyPopup();
+new Animate();

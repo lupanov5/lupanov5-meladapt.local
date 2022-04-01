@@ -25,7 +25,7 @@
                 и в последующие 2-5 дней — по 1 таблетке за 30-40 минут до сна.
             </div>
             <div class="use-tablet">
-                <div class="use-tablet__item">
+                <div class="use-tablet__item wow-slideRight" data-animate="slideRight">
                     <div class="use-tablet__img">
                         <img src="/local/templates/meladapt/assets/images/tablet-1.png" alt="">
                     </div>
@@ -37,7 +37,7 @@
                         <p>в сутки</p>
                     </div>
                 </div>
-                <div class="use-tablet__item">
+                <div class="use-tablet__item wow-slideLeft" data-animate="slideLeft">
                     <div class="use-tablet__img">
                         <img src="/local/templates/meladapt/assets/images/tablet-2.png" alt="">
                     </div>

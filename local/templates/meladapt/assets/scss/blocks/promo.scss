@@ -204,8 +204,19 @@
     }
 }
 
+
 .fadeIn {
     animation: fadeIn 1.5s ease-in-out;
+}
+
+.slideRight {
+    animation: slideRight 1.5s ease-in-out;
+    animation-fill-mode: both;
+}
+
+.slideLeft {
+    animation: slideLeft 1.5s ease-in-out;
+    animation-fill-mode: both;
 }
 
 @keyframes fadeIn {
@@ -214,5 +225,27 @@
     }
     100%{
         transform: scale(1);
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
     }
 }

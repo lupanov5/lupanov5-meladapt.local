@@ -44,6 +44,10 @@
         width: calc(33% - 30px);
         margin-right: 0px;
         margin-bottom: 35px;
+        transition: all $tr-time $tr-type;
+        &:hover {
+            transform: scale(1.2);
+        }
     }
     &__img {
         height: 100px;

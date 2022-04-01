@@ -69,8 +69,10 @@ $footer = \dnext\Models\Home\Settings::instance()->getFirstCached();
             </div>
         </div>
         <div class="footer__bottom">
-            <a href="#" class="footer__politics link" target="_blank" rel="noopener">
-                <?= $footer['TEXT_COPYRIGHT_FOOTER']['VALUE'] ?></a>
+            <div class="footer__politics" >
+                © 2021 Фармацевтическая компания «ОЗОН», <a href="#" class="footer__politics link" target="_blank" rel="noopener">
+                    <?= $footer['TEXT_COPYRIGHT_FOOTER']['VALUE'] ?></a>
+            </div>
             <a href="#" class="footer__link link" target="_blank" rel="noopener"><?= $footer['TEXT_PERSONAL_DATA_FOOTER']['VALUE'] ?></a>
             <div class="footer__dnext">
                 Разработка сайта — <a href="https://dnext.ru/" class="link" target="_blank" rel="noopener">

@@ -3,14 +3,14 @@
     <div class="container property__container">
 
         <ul class="list property__list">
-            <li class="list__item">
+            <li class="list__item wow-fadeIn" data-animate="fadeIn">
                 <div class="list__head">
                     <img src="/local/templates/meladapt/assets/images/prop-1.png" alt="">
                 </div>
                 <div class="list__title">Нормализует суточные ритмы. Ускоряет засыпание
                 </div>
             </li>
-            <li class="list__item">
+            <li class="list__item wow-fadeIn" data-animate="fadeIn">
                 <div class="list__head">
                     <img src="/local/templates/meladapt/assets/images/prop-2.png" alt="">
                 </div>
@@ -18,7 +18,7 @@
                     и разбитости
                 </div>
             </li>
-            <li class="list__item">
+            <li class="list__item wow-fadeIn" data-animate="fadeIn">
                 <div class="list__head">
                     <img src="/local/templates/meladapt/assets/images/prop-3.png" alt="">
                 </div>
@@ -26,7 +26,7 @@
                     к быстрой смене часовых поясов
                 </div>
             </li>
-            <li class="list__item">
+            <li class="list__item wow-fadeIn" data-animate="fadeIn">
                 <div class="list__head">
                     <img src="/local/templates/meladapt/assets/images/prop-4.png" alt="">
                 </div>
