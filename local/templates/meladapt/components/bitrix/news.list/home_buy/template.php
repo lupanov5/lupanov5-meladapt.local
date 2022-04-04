@@ -8,7 +8,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
  */
 ?>
 <?php if ($arResult['SETTINGS_PAGE']['CHECKBOX_BUY']['VALUE']): ?>
-    <section class="buy">
+    <section id="buy" class="buy">
         <div class="container buy__container">
 
             <div class="buy__head">
