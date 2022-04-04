@@ -151,7 +151,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
     </div>
 </section>
 
-<section id="buy" class="melatonin">
+<section id="about" class="melatonin">
     <div class="container melatonin__container">
         <div class="melatonin__bg">
             <?php foreach ($arResult['PROPERTIES']['BACKGROUND_IMAGE_WHY']['VALUE'] as $image): ?>
