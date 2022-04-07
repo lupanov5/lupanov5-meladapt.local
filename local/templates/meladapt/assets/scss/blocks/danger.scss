@@ -2,7 +2,7 @@
     padding-top: 90px;
     padding-bottom: 55px;
     position: relative;
-    z-index: 2;
+    z-index: 5;
     &__bg {
         position: absolute;
         bottom: 0;
@@ -10,6 +10,10 @@
         max-width: 77%;
         right: -22%;
         height: 100%;
+        img {
+            object-fit: cover;
+            height: 100%;
+        }
     }
     &__container {
         position: initial;

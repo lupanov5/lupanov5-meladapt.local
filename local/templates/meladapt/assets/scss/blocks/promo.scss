@@ -12,11 +12,11 @@
         &:after {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(1deg, #132434 0%, rgba(19, 36, 52, 0) 35.45%), linear-gradient(180deg, #142534 0%, rgba(20, 37, 52, 0) 6.77%), linear-gradient(360deg, #132434 17.6%, rgba(19, 36, 52, 0) 63.05%), linear-gradient(90deg, #132434 0%, rgba(19, 36, 52, 0) 35.45%);
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(1deg, #132434 0%, rgba(19, 36, 52, 0) 35.45%), linear-gradient(180deg, #142534 0%, rgba(20, 37, 52, 0) 6.77%), linear-gradient(360deg, #132434 17.6%, rgba(19, 36, 52, 0) 63.05%), linear-gradient(90deg, #132434 0%, rgba(19, 36, 52, 0) 35.45%), linear-gradient(to right, transparent 75%, #132434);
             z-index: 1;
         }
         img {
@@ -143,7 +143,8 @@
         &__bg-right {
             top: -250px;
             img {
-                object-fit: contain;
+                object-fit: cover;
+                height: 70%;
             }
         }
         &__bg-left {

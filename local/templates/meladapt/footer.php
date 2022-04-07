@@ -40,7 +40,10 @@ $feedback = \dnext\Models\Feedback\Settings::instance()->getFirstElement();
             </div>
             <?php if (!empty($footer['FILE_PROMO']['VALUE']) && !empty($footer['TEXT_LINK_INSTRUCTION_FOOTER']['VALUE'])): ?>
             <a href="<?= \dnext\Helpers\FilesHelper::getImageById($footer['FILE_PROMO']['VALUE']) ?>" class="flex-col md-6 sm-24 link footer__instruction">
-                <?= $footer['TEXT_LINK_INSTRUCTION_FOOTER']['VALUE'] ?></a>
+                <span><?= $footer['TEXT_LINK_INSTRUCTION_FOOTER']['VALUE'] ?></span>
+                <svg class="icon">
+                    <use xlink:href="#icon-arrow-down"></use>
+                </svg></a>
             <?php endif; ?>
             <div class="flex-col md-24 footer__warning">
                 <?= $footer['TEXT_LINK_CONTRA_FOOTER']['VALUE'] ?>

@@ -13,6 +13,14 @@ class Tabs {
             closeOthers: true,
             isAnimation: true
         });
+        const use = new HandyCollapse({
+            nameSpace: "use",
+            toggleButtonAttr: 'data-use-btn',
+            toggleContentAttr: 'data-use-content',
+            activeClass: 'active',
+            closeOthers: true,
+            isAnimation: true
+        });
     }
 }
 

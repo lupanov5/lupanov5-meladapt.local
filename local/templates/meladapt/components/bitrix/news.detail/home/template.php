@@ -69,7 +69,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             <?php endif; ?>
             <?php if (!empty($arResult['PROPERTIES']['LINK_TEXT_PROMO']['VALUE']) && !empty($arResult['PROPERTIES']['FILE_PROMO']['VALUE'])): ?>
                 <a href="<?= $a = \dnext\Helpers\FilesHelper::getFilePathById($arResult['PROPERTIES']['FILE_PROMO']['VALUE'])['PATH'] ?>"
-                   class="link promo__instr">
+                   class="link promo__instr" target="_blank">
                     <span><?= $arResult['PROPERTIES']['LINK_TEXT_PROMO']['VALUE'] ?></span>
                     <svg class="icon">
                         <use xlink:href="#icon-arr-white"></use>
@@ -288,11 +288,13 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                      alt="">
             </div>
             <div class="use-picture__head">
-                <span class="use-picture__head_item active"><?= $arResult['PROPERTIES']['DESC_1_USE']['VALUE'] ?></span>
-                <span class="use-picture__head_item"><?= $arResult['PROPERTIES']['DESC_2_USE']['VALUE'] ?></span>
+                <span data-use-btn="10" class="use-picture__head_item active"><?= $arResult['PROPERTIES']['DESC_1_USE']['VALUE'] ?></span>
+                <span data-use-btn="30" class="use-picture__head_item"><?= $arResult['PROPERTIES']['DESC_2_USE']['VALUE'] ?></span>
             </div>
             <div class="use-picture__img">
-                <img src="<?= \dnext\Helpers\FilesHelper::getImageById($arResult['PROPERTIES']['PRODUCT_IMAGE_USE']['VALUE']) ?>"
+                <img data-use-content="10" class="active" src="<?= \dnext\Helpers\FilesHelper::getImageById($arResult['PROPERTIES']['PRODUCT_IMAGE_USE']['VALUE']) ?>"
+                     alt="pack">
+                <img data-use-content="30" src="/local/templates/meladapt/assets/images/use-1.png"
                      alt="pack">
             </div>
             <h4 class="use-picture__bottom"><?= $arResult['PROPERTIES']['DESC_3_USE']['~VALUE']['TEXT'] ?></h4>

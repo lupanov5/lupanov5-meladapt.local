@@ -42,7 +42,15 @@
         max-width: 50%;
         &__img {
             max-width: 465px;
+            height: 216px;
             margin: 0 auto 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                height: 100%;
+                object-fit: contain;
+            }
         }
         &__head {
             display: flex;
@@ -51,6 +59,7 @@
             &_item {
                 text-align: center;
                 color: #FFFFFF;
+                cursor: pointer;
                 &:first-child {
                     padding-right: 11px;
                     border-right: 1px solid rgba(255, 255, 255, 0.6);
@@ -147,6 +156,7 @@
         &-picture {
             &__img {
                 max-width: 330px;
+                height: 170px;
             }
         }
         &-tablet {
@@ -163,6 +173,7 @@
             left: 25%;
             &__img {
                 max-width: 260px;
+                height: 130px;
             }
             &__bottom {
                 font-size: 42px;
