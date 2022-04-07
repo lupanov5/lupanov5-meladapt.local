@@ -66,7 +66,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
             </div>
             <?php if (!empty($arResult['PROPERTIES']['LINK_TEXT_PROMO']['VALUE']) && !empty($arResult['PROPERTIES']['FILE_PROMO']['VALUE'])): ?>
                 <a href="<?= \dnext\Helpers\FilesHelper::getFilePathById($arResult['PROPERTIES']['FILE_PROMO']['VALUE'])['PATH'] ?>"
-                   class="link use__instr">
+                   class="link use__instr" target="_blank">
                     <span><?= $arResult['PROPERTIES']['LINK_TEXT_PROMO']['VALUE'] ?></span>
                     <svg class="icon">
                         <use xlink:href="#icon-arrow-down"></use>

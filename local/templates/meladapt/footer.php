@@ -41,7 +41,7 @@ $feedback = \dnext\Models\Feedback\Settings::instance()->getFirstElement();
             </div>
             <?php if (!empty($footer['FILE_PROMO']['VALUE']) && !empty($footer['TEXT_LINK_INSTRUCTION_FOOTER']['VALUE'])): ?>
                 <a href="<?= \dnext\Helpers\FilesHelper::getFilePathById($footer['FILE_PROMO']['VALUE'])['PATH'] ?>"
-                   class="flex-col md-6 sm-24 link footer__instruction">
+                   class="flex-col md-6 sm-24 link footer__instruction" target="_blank">
                     <span><?= $footer['TEXT_LINK_INSTRUCTION_FOOTER']['VALUE'] ?></span>
                     <svg class="icon">
                         <use xlink:href="#icon-arrow-down"></use>
