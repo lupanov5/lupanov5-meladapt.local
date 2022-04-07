@@ -1,5 +1,5 @@
 .questions {
-    padding-top: 100px;
+    padding-top: 180px;
     padding-bottom: 155px;
     &_main {
         padding-top: 70px;
@@ -29,38 +29,41 @@
     }
     &__decor {
         position: absolute;
-        right: -100px;
-        top: 160px;
-        max-height: 1500px;
+        right: -27%;
+        top: 260px;
+        height: 610px;
         z-index: -1;
         img {
-            max-height: 600px;
-            &:nth-child(1) {
-                position: relative;
-                right: -200px;
-                z-index: -1;
-                -webkit-mask-image: url('/local/templates/meladapt/assets/images/cloud-l.png');
-                -webkit-mask-size: cover;
-                -webkit-mask-repeat: no-repeat;
-            }
-            &:nth-child(2) {
-                position: relative;
-                bottom: 770px;
-                z-index: -2;
-                right: -20%;
-            }
-            &:nth-child(3) {
-                position: absolute;
-                top: 230px;
-                right: -45%;
-                z-index: 1;
-            }
-            &:nth-child(4) {
-                position: absolute;
-                bottom: 350px;
-                z-index: 0;
-                right: -11%;
-            }
+            height: 100%;
+            right: -200px;
+            z-index: -1;
+            -webkit-mask-image: url('/local/templates/meladapt/assets/images/cloud-l.png');
+            -webkit-mask-size: contain;
+            -webkit-mask-repeat: no-repeat;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            height: 140%;
+            width: 140%;
+            bottom: 13%;
+            z-index: 0;
+            right: -43%;
+            background-image: url("/local/templates/meladapt/assets/images/decor-0.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        &:after {
+            content: "";
+            background-image: url("/local/templates/meladapt/assets/images/decor-2.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            height: 150%;
+            width: 150%;
+            top: 26%;
+            right: -35%;
+            z-index: 1;
         }
     }
     &__wrapper {
@@ -158,6 +161,9 @@
     }
 
     @include media('md-max') {
+        &__decor {
+            filter: brightness(0.8);
+        }
         &_main {
             .questions__bg {
                 max-width: 18%;
@@ -166,6 +172,9 @@
     }
 
     @include media('sm-max') {
+        &__decor {
+            height: 400px;
+        }
         &_main {
             .questions__bg {
                 display: none;
@@ -177,29 +186,22 @@
         padding-top: 210px;
         padding-bottom: 60px;
         &__decor {
+            width: 100%;
+            height: auto;
+            right: 0;
+            top: 0;
             img {
-                filter: brightness(0.8);
-                &:nth-child(1) {
-                    position: relative;
-                    right: initial;
-                    top: -170px;
-                    z-index: -1;
-                    -webkit-mask-image: none;
-                }
-                &:nth-child(2) {
-                    bottom: 273px;
-                    right: 16%;
-                    z-index: -1;
-                }
-                &:nth-child(3) {
-                    top: -61px;
-                    right: 0%;
-                }
-                &:nth-child(4) {
-                    bottom: 340px;
-                    z-index: 0;
-                    right: 0%;
-                }
+                right: 0;
+                top: 0;
+                -webkit-mask-image: none;
+                object-fit: contain;
+            }
+            &:after {
+                content: none;
+            }
+            &:before {
+                bottom: -60%;
+                right: -22%;
             }
         }
         &__title {
