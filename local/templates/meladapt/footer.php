@@ -93,7 +93,7 @@ $feedback = \dnext\Models\Feedback\Settings::instance()->getFirstElement();
         <div class="footer__bottom">
             <div class="footer__politics" >
                 <?= $footer['TEXT_COPYRIGHT_1_FOOTER']['VALUE'] ?>
-                <a href="/local/templates/meladapt/pages/politics.php" class="link" target="_blank" rel="noopener">
+                <a href="/privacy_policy/" class="link" target="_blank" rel="noopener">
                     <span><?= $footer['TEXT_COPYRIGHT_2_FOOTER']['VALUE'] ?></span>
                 </a>
             </div>
