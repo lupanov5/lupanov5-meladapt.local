@@ -9,9 +9,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 ?>
 <section class="container questions">
     <div class="questions__decor">
-        <?php foreach ($arResult['SETTINGS_PAGE']['IMAGES']['VALUE'] as $image): ?>
-            <img src="<?= \dnext\Helpers\FilesHelper::getImageById($image) ?>" alt="">
-        <?php endforeach; ?>
+            <img src="<?= \dnext\Helpers\FilesHelper::getImageById($arResult['SETTINGS_PAGE']['IMAGES']['VALUE']) ?>" alt="">
     </div>
     <div class="content-narrow">
         <div class="questions__title">
