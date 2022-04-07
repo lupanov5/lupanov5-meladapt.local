@@ -5,6 +5,9 @@
         padding-top: 70px;
         padding-bottom: 100px;
         background-color: $c-blue;
+        .questions__bg {
+            overflow: hidden;
+        }
         @include media('xs') {
             padding-top: 35px;
             padding-bottom: 50px;

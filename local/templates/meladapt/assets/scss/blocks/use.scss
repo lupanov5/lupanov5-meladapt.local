@@ -52,6 +52,16 @@
                 object-fit: contain;
             }
         }
+        &__block {
+            display: flex;
+            flex-direction: column;
+            transform: scale(0);
+            transition: all 0.4s ease-in-out;
+            &#{&}.active {
+                transition: all 0.4s ease-in-out;
+                transform: scale(1);
+            }
+        }
         &__head {
             display: flex;
             margin: 0 auto 20px;

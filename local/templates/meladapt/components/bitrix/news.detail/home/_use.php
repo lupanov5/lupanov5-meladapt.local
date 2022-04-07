@@ -26,7 +26,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                      alt="pack">
                 <h4 class="use-picture__bottom"><?= $arResult['PROPERTIES']['DESC_1_USE']['~VALUE']['TEXT'] ?></h4>
             </div>
-            <div data-use-content="30" class=" ">
+            <div data-use-content="30" class="use-picture__block">
                 <img class="use-picture__img" src="<?= \dnext\Helpers\FilesHelper::getImageById($arResult['PROPERTIES']['PRODUCT_2_IMAGE_USE']['VALUE']) ?>"
                      alt="pack">
                 <h4 class="use-picture__bottom"><?= $arResult['PROPERTIES']['DESC_2_USE']['~VALUE']['TEXT'] ?></h4>

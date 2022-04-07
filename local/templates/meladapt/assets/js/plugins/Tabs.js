@@ -18,6 +18,7 @@ class Tabs {
             toggleButtonAttr: 'data-use-btn',
             toggleContentAttr: 'data-use-content',
             activeClass: 'active',
+            animationSpeed: 300,
             closeOthers: true,
             isAnimation: true
         });
