@@ -95,9 +95,6 @@
     &__link {
         border-bottom: 1px solid #202B56;
     }
-    &__politics {
-        border-bottom: 1px solid #202B56;
-    }
 
     @include media('lg-max') {
         &__brand {
