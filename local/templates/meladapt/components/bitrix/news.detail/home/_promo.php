@@ -68,8 +68,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                    class="btn btn_lt promo__btn"><?= $arResult['PROPERTIES']['BUTTON_TEXT_PROMO']['VALUE'] ?></a>
             <?php endif; ?>
             <?php if (!empty($arResult['PROPERTIES']['LINK_TEXT_PROMO']['VALUE']) && !empty($arResult['PROPERTIES']['FILE_PROMO']['VALUE'])): ?>
-                <a href="<?= $a = \dnext\Helpers\FilesHelper::getFilePathById($arResult['PROPERTIES']['FILE_PROMO']['VALUE'])['PATH'] ?>"
-                   class="link promo__instr" target="_blank">
+                <a href="<?= \dnext\Helpers\FilesHelper::getFilePathById($arResult['PROPERTIES']['FILE_PROMO']['VALUE'])['PATH'] ?>"
+                   class="link promo__instr">
                     <span><?= $arResult['PROPERTIES']['LINK_TEXT_PROMO']['VALUE'] ?></span>
                     <svg class="icon">
                         <use xlink:href="#icon-arr-white"></use>

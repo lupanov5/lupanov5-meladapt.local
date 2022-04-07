@@ -14,7 +14,7 @@ $feedback = \dnext\Models\Feedback\Settings::instance()->getFirstElement();
     <div class="footer__wrap container">
         <div class="flex-row footer__top">
             <div class="flex-col md-6 sm-24 footer__brand">
-                <a href="/" class="brand"> <img alt="{$smarty.const.SITE_NAME}"
+                <a href="/" class="brand"> <img alt=""
                                                 src="<?= \dnext\Helpers\FilesHelper::getImageById($footer['LOGOTYPE_1_FOOTER']['VALUE']) ?>"
                                                 class="brand__img"> </a>
             </div>
@@ -40,7 +40,7 @@ $feedback = \dnext\Models\Feedback\Settings::instance()->getFirstElement();
                 </ul>
             </div>
             <?php if (!empty($footer['FILE_PROMO']['VALUE']) && !empty($footer['TEXT_LINK_INSTRUCTION_FOOTER']['VALUE'])): ?>
-                <a href="<?= \dnext\Helpers\FilesHelper::getImageById($footer['FILE_PROMO']['VALUE']) ?>"
+                <a href="<?= \dnext\Helpers\FilesHelper::getFilePathById($footer['FILE_PROMO']['VALUE']) ?>"
                    class="flex-col md-6 sm-24 link footer__instruction">
                     <span><?= $footer['TEXT_LINK_INSTRUCTION_FOOTER']['VALUE'] ?></span>
                     <svg class="icon">
