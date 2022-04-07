@@ -34,7 +34,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 
         <div class="promo__feat feat">
             <?php if (!empty($arResult['PROPERTIES']['ICON_1_PROMO']['VALUE']) && !empty($arResult['PROPERTIES']['DESC_1_PROMO']['VALUE'])): ?>
-                <div class="feat__item fadeIn">
+                <div class="wow-fadeIn feat__item" data-animate="fadeIn">
                     <div class="feat__img">
                         <img src="<?= \dnext\Helpers\FilesHelper::getImageById($arResult['PROPERTIES']['ICON_1_PROMO']['VALUE']) ?>"
                              alt="Features">
@@ -152,7 +152,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 </section>
 
 <section id="about" class="melatonin">
-    <div class="container melatonin__container">
+    <div class="container melatonin__container wow-slideRight" data-animate="slideRight">
         <div class="melatonin__bg">
             <?php foreach ($arResult['PROPERTIES']['BACKGROUND_IMAGE_WHY']['VALUE'] as $image): ?>
                 <img src="<?= \dnext\Helpers\FilesHelper::getImageById($image) ?>" alt="">
@@ -171,7 +171,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 
             <div class="feat melatonin__feat">
                 <?php if (!empty($arResult['PROPERTIES']['ICON_1_WHY']['VALUE']) && !empty($arResult['PROPERTIES']['DESC_1_WHY']['VALUE'])): ?>
-                    <div class="feat__item fadeIn">
+                    <div class="feat__item wow-fadeIn" data-animate="fadeIn">
                         <div class="feat__img">
                             <img src="<?= \dnext\Helpers\FilesHelper::getImageById($arResult['PROPERTIES']['ICON_1_WHY']['VALUE']) ?>"
                                  alt="Features">
@@ -182,7 +182,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                     </div>
                 <?php endif; ?>
                 <?php if (!empty($arResult['PROPERTIES']['ICON_2_WHY']['VALUE']) && !empty($arResult['PROPERTIES']['DESC_2_WHY']['VALUE'])): ?>
-                    <div class="feat__item fadeIn">
+                    <div class="feat__item wow-fadeIn" data-animate="fadeIn">
                         <div class="feat__img">
                             <img src="<?= \dnext\Helpers\FilesHelper::getImageById($arResult['PROPERTIES']['ICON_2_WHY']['VALUE']) ?>"
                                  alt="Features">
@@ -193,7 +193,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                     </div>
                 <?php endif; ?>
                 <?php if (!empty($arResult['PROPERTIES']['ICON_3_WHY']['VALUE']) && !empty($arResult['PROPERTIES']['DESC_3_WHY']['VALUE'])): ?>
-                    <div class="feat__item fadeIn">
+                    <div class="feat__item wow-fadeIn" data-animate="fadeIn">
                         <div class="feat__img">
                             <img src="<?= \dnext\Helpers\FilesHelper::getImageById($arResult['PROPERTIES']['ICON_3_WHY']['VALUE']) ?>"
                                  alt="Features">
@@ -204,7 +204,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                     </div>
                 <?php endif; ?>
                 <?php if (!empty($arResult['PROPERTIES']['ICON_4_WHY']['VALUE']) && !empty($arResult['PROPERTIES']['DESC_4_WHY']['VALUE'])): ?>
-                    <div class="feat__item fadeIn">
+                    <div class="feat__item wow-fadeIn" data-animate="fadeIn">
                         <div class="feat__img">
                             <img src="<?= \dnext\Helpers\FilesHelper::getImageById($arResult['PROPERTIES']['ICON_4_WHY']['VALUE']) ?>"
                                  alt="Features">
@@ -223,7 +223,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 <section class="whom">
 
     <div class="container whom__container">
-        <div class="whom__bg">
+        <div class="whom__bg wow-slideLeft" data-animate="slideLeft">
             <?php foreach ($arResult['PROPERTIES']['BACKGROUND_IMAGE_WHOM']['VALUE'] as $imageID): ?>
                 <img src="<?= \dnext\Helpers\FilesHelper::getImageById($imageID) ?>" alt="">
             <?php endforeach; ?>
@@ -351,7 +351,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 
         <ul class="list property__list">
             <?php if (!empty($arResult['PROPERTIES']['IMAGE_1_FACT']['VALUE']) && !empty($arResult['PROPERTIES']['DESC_1_FACT']['~VALUE']['TEXT'])): ?>
-                <li class="list__item">
+                <li  class="list__item wow-fadeIn" data-animate="fadeIn">
                     <div class="list__head">
                         <img src="<?= \dnext\Helpers\FilesHelper::getImageById($arResult['PROPERTIES']['IMAGE_1_FACT']['VALUE']) ?>"
                              alt="">
@@ -361,7 +361,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                 </li>
             <?php endif; ?>
             <?php if (!empty($arResult['PROPERTIES']['IMAGE_2_FACT']['VALUE']) && !empty($arResult['PROPERTIES']['DESC_2_FACT']['~VALUE']['TEXT'])): ?>
-                <li class="list__item">
+                <li  class="list__item wow-fadeIn" data-animate="fadeIn">
                     <div class="list__head">
                         <img src="<?= \dnext\Helpers\FilesHelper::getImageById($arResult['PROPERTIES']['IMAGE_2_FACT']['VALUE']) ?>"
                              alt="">
@@ -371,7 +371,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                 </li>
             <?php endif; ?>
             <?php if (!empty($arResult['PROPERTIES']['IMAGE_3_FACT']['VALUE']) && !empty($arResult['PROPERTIES']['DESC_3_FACT']['~VALUE']['TEXT'])): ?>
-                <li class="list__item">
+                <li  class="list__item wow-fadeIn" data-animate="fadeIn">
                     <div class="list__head">
                         <img src="<?= \dnext\Helpers\FilesHelper::getImageById($arResult['PROPERTIES']['IMAGE_3_FACT']['VALUE']) ?>"
                              alt="">
@@ -381,7 +381,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                 </li>
             <?php endif; ?>
             <?php if (!empty($arResult['PROPERTIES']['IMAGE_4_FACT']['VALUE']) && !empty($arResult['PROPERTIES']['DESC_4_FACT']['~VALUE']['TEXT'])): ?>
-                <li class="list__item">
+                <li  class="list__item wow-fadeIn" data-animate="fadeIn">
                     <div class="list__head">
                         <img src="<?= \dnext\Helpers\FilesHelper::getImageById($arResult['PROPERTIES']['IMAGE_4_FACT']['VALUE']) ?>"
                              alt="">
