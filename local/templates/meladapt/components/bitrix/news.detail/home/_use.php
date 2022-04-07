@@ -21,14 +21,16 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                 <span data-use-btn="10" class="use-picture__head_item active"><?= $arResult['PROPERTIES']['TAB_1_USE']['VALUE'] ?></span>
                 <span data-use-btn="30" class="use-picture__head_item"><?= $arResult['PROPERTIES']['TAB_2_USE']['VALUE'] ?></span>
             </div>
-            <div class="use-picture__img">
-                <img data-use-content="10" class="active" src="<?= \dnext\Helpers\FilesHelper::getImageById($arResult['PROPERTIES']['PRODUCT_1_IMAGE_USE']['VALUE']) ?>"
+            <div data-use-content="10" class="use-picture__block active">
+                <img class="use-picture__img" src="<?= \dnext\Helpers\FilesHelper::getImageById($arResult['PROPERTIES']['PRODUCT_1_IMAGE_USE']['VALUE']) ?>"
                      alt="pack">
-                <img data-use-content="30" src="<?= \dnext\Helpers\FilesHelper::getImageById($arResult['PROPERTIES']['PRODUCT_2_IMAGE_USE']['VALUE']) ?>"
-                     alt="pack">
+                <h4 class="use-picture__bottom"><?= $arResult['PROPERTIES']['DESC_1_USE']['~VALUE']['TEXT'] ?></h4>
             </div>
-            <h4 class="use-picture__bottom"><?= $arResult['PROPERTIES']['DESC_1_USE']['~VALUE']['TEXT'] ?></h4>
-<!--            <h4 class="use-picture__bottom">--><?//= $arResult['PROPERTIES']['DESC_2_USE']['~VALUE']['TEXT'] ?><!--</h4>-->
+            <div data-use-content="30" class=" ">
+                <img class="use-picture__img" src="<?= \dnext\Helpers\FilesHelper::getImageById($arResult['PROPERTIES']['PRODUCT_2_IMAGE_USE']['VALUE']) ?>"
+                     alt="pack">
+                <h4 class="use-picture__bottom"><?= $arResult['PROPERTIES']['DESC_2_USE']['~VALUE']['TEXT'] ?></h4>
+            </div>
         </div>
 
         <div class="use__head">

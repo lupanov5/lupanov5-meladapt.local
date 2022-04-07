@@ -11,7 +11,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 <section class="whom">
 
     <div class="container whom__container">
-        <div class="whom__bg">
+        <div class="whom__bg wow-slideLeft" data-animate="slideLeft">
             <?php foreach ($arResult['PROPERTIES']['BACKGROUND_IMAGE_WHOM']['VALUE'] as $imageID): ?>
                 <img src="<?= \dnext\Helpers\FilesHelper::getImageById($imageID) ?>" alt="">
             <?php endforeach; ?>

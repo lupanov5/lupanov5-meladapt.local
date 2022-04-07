@@ -34,7 +34,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 
         <div class="promo__feat feat">
             <?php if (!empty($arResult['PROPERTIES']['ICON_1_PROMO']['VALUE']) && !empty($arResult['PROPERTIES']['DESC_1_PROMO']['VALUE'])): ?>
-                <div class="feat__item fadeIn">
+                <div class="wow-fadeIn feat__item" data-animate="fadeIn">
                     <div class="feat__img">
                         <img src="<?= \dnext\Helpers\FilesHelper::getImageById($arResult['PROPERTIES']['ICON_1_PROMO']['VALUE']) ?>"
                              alt="Features">
@@ -43,7 +43,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                 </div>
             <?php endif; ?>
             <?php if (!empty($arResult['PROPERTIES']['ICON_2_PROMO']['VALUE']) && !empty($arResult['PROPERTIES']['DESC_2_PROMO']['VALUE'])): ?>
-                <div class="feat__item fadeIn">
+                <div class="wow-fadeIn feat__item" data-animate="fadeIn">
                     <div class="feat__img">
                         <img src="<?= \dnext\Helpers\FilesHelper::getImageById($arResult['PROPERTIES']['ICON_2_PROMO']['VALUE']) ?>"
                              alt="Features">
@@ -52,7 +52,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                 </div>
             <?php endif; ?>
             <?php if (!empty($arResult['PROPERTIES']['ICON_3_PROMO']['VALUE']) && !empty($arResult['PROPERTIES']['DESC_3_PROMO']['VALUE'])): ?>
-                <div class="feat__item fadeIn">
+                <div class="wow-fadeIn feat__item" data-animate="fadeIn">
                     <div class="feat__img">
                         <img src="<?= \dnext\Helpers\FilesHelper::getImageById($arResult['PROPERTIES']['ICON_3_PROMO']['VALUE']) ?>"
                              alt="Features">
