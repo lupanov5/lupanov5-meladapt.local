@@ -14,6 +14,67 @@
         }
     }
 
+    &__agree-label {
+        position: relative;
+        padding-left: 48px;
+        font-size: 12px;
+        line-height: 15px;
+        color: rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+
+        a {
+            display: inline;
+            font-weight: 500;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 24px;
+            height: 24px;
+            top: 2px;
+            left: 0;
+            border: 1px solid rgba(0, 0, 0, 0.18);
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 15px;
+            height: 11px;
+            top: 8px;
+            left: 4px;
+            opacity: 0;
+            visibility: hidden;
+            background-image: url("/local/templates/meladapt/assets/images/icons/check-mark.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            transition: all $tr-time $tr-type;
+
+            .nx-actions__agree-checkbox:checked + & {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        @include media("xs") {
+            padding-left: 29px;
+
+            &::before {
+                width: 18px;
+                height: 18px;
+            }
+
+            &::after {
+                width: 10px;
+                height: 8px;
+                top: 7px;
+                left: 4px;
+            }
+        }
+    }
+
     &_center{
         justify-content: center;
     }
