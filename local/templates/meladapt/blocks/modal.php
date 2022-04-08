@@ -39,9 +39,20 @@
                                 <span class="nx-dynamic-label__text">Расскажите, что вас тревожит или вызывает затруднения</span>
                             </label>
                         </div>
-                        <button type="submit" class="btn modal__btn" data-send-request>
-                            Отправить
-                        </button>
+                        <div class="nx-actions__item">
+                            <div class="form-group note">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="agree-feedback" name="agree-feedback" class="nx-actions__agree-checkbox hidden" data-agree-inp>
+                                    <label class="checkbox__text nx-actions__agree-label" for="agree-feedback">Я согласен на обработку персональных данных
+                                        и ознакомлен с <a href="/<?= LANGUAGE_ID ?>/policy/" class="link"><span>Политикой конфиденциальности</span></a></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nx-actions__item nx-actions__item_btn">
+                            <button type="submit" class="btn modal__btn" data-agree-btn disabled data-send-request="main">
+                                Отправить
+                            </button>
+                        </div>
                     </div>
                 </form>
             </div>

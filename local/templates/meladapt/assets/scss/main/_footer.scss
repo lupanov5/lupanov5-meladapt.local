@@ -74,6 +74,10 @@
             &__link {
                 color: $c-blue;
                 border-bottom: 1px solid $c-blue;
+                &:hover {
+                    color: $c-orange;
+                    border-bottom: 1px solid $c-orange;
+                }
             }
         }
     }
@@ -90,10 +94,16 @@
         margin-left: auto;
         a {
             border-bottom: 1px solid #202B56;
+            &:hover {
+                border-bottom: 1px solid $c-orange;
+            }
         }
     }
     &__link {
         border-bottom: 1px solid #202B56;
+        &:hover {
+            border-bottom: 1px solid $c-orange;
+        }
     }
 
     @include media('lg-max') {

@@ -149,9 +149,21 @@ $feedback = \dnext\Models\Feedback\Settings::instance()->getFirstElement();
                                 <span class="nx-dynamic-label__text"><?= $feedback['DESC_COMMENT']['VALUE'] ?></span>
                             </label>
                         </div>
-                        <button type="submit" class="btn modal__btn" data-send-request>
-                            <?= $feedback['TEXT_BUTTON']['VALUE'] ?>
-                        </button>
+
+                        <div class="flex-col xs-24 nx-actions__item">
+                            <div class="form-group note">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="agree-feedback" name="agree-feedback" class="nx-actions__agree-checkbox hidden" data-agree-inp>
+                                    <label class="checkbox__text nx-actions__agree-label" for="agree-feedback">Я согласен на обработку персональных данных
+                                        и ознакомлен с <a href="/<?= LANGUAGE_ID ?>/policy/" class="link"><span>Политикой конфиденциальности</span></a></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-col xs-24 nx-actions__item nx-actions__item_btn">
+                            <button type="submit" class="btn modal__btn" data-agree-btn disabled data-send-request>
+                                <?= $feedback['TEXT_BUTTON']['VALUE'] ?>
+                            </button>
+                        </div>
                     </div>
                 </form>
             </div>
