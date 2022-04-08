@@ -154,7 +154,7 @@ $feedback = \dnext\Models\Feedback\Settings::instance()->getFirstElement();
                             <div class="form-group note">
                                 <div class="checkbox">
                                     <input type="checkbox" id="agree-feedback" name="agree-feedback" class="nx-actions__agree-checkbox hidden" data-agree-inp>
-                                    <label class="checkbox__text nx-actions__agree-label" for="agree-feedback">Я согласен на обработку персональных данных
+                                    <label class="checkbox__text nx-actions__agree-label" for="agree-feedback">Я согласен на <a class="link" href="/consent/" ><span>обработку персональных данных</span></a>
                                         и ознакомлен с <a href="/<?= LANGUAGE_ID ?>/policy/" class="link"><span>Политикой конфиденциальности</span></a></label>
                                 </div>
                             </div>
