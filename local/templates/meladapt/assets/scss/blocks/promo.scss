@@ -31,29 +31,20 @@
         height: 100%;
         right: 35%;
         z-index: -1;
-        &:after {
-            // content: '';
-            position: absolute;
-            top: 0;
-            left: -170px;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(180deg, #142534 0%, rgba(20, 37, 52, 0) 6.77%), linear-gradient(360deg, #132434 17.6%, rgba(19, 36, 52, 0) 63.05%), linear-gradient(90deg, #132434 0%, rgba(19, 36, 52, 0) 35.45%);
-            z-index: 1;
-        }
+        opacity: .5;
         img {
             height: 100%;
             object-fit: contain;
             &:nth-child(1) {
                 position: relative;
-                left: -25%;
-                height: 63%;
+                left: -35%;
+                height: 60%;
                 width: auto;
                 top: 27%;
             }
             &:nth-child(2) {
                 position: absolute;
-                left: -14%;
+                left: -15%;
                 height: 60%;
                 width: auto;
                 top: 6%;
