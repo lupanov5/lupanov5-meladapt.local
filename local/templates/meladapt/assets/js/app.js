@@ -67,8 +67,10 @@ import CompareTable from './modules/CompareTable';
 import CompareHead from './modules/CompareHead';
 import CookiePolicyPopup from "./modules/CookiePolicyPopup";
 import Animate from "./modules/Animate";
+import HeaderFix from "./modules/HeaderFix";
 
-Likely.initiate();
+
+    Likely.initiate();
 objectFitImages();
 elementClosest(window);
 
@@ -114,3 +116,4 @@ new CompareTable();
 new CompareHead();
 new CookiePolicyPopup();
 new Animate();
+new HeaderFix();

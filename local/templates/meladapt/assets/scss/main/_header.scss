@@ -12,6 +12,13 @@
     .filter-open &{
         z-index: 0;
     }
+
+    &#{&}.fixed {
+        position: fixed;
+        background-color: $c-blue;
+        animation: header-fix 800ms ease 0s 1 both;
+    }
+
     &__wrap, &__container{
         height: 100%;
     }
@@ -93,5 +100,15 @@
 
     &__img{
         max-height: 100%;
+    }
+}
+
+@keyframes header-fix {
+    0% {
+        top: -200px;
+    }
+
+    100% {
+        top: 0;
     }
 }

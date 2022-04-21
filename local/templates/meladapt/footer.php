@@ -48,10 +48,6 @@ $feedback = \dnext\Models\Feedback\Settings::instance()->getFirstElement();
                     </svg>
                 </a>
             <?php endif; ?>
-            <div class="flex-col md-24 footer__warning">
-                <?= $footer['TEXT_LINK_CONTRA_FOOTER']['VALUE'] ?>
-                <!--<img src="/local/templates/meladapt/assets/images/warning.png" alt="">-->
-            </div>
         </div>
         <div class="footer__middle">
             <?php if (!empty($footer['LOGOTYPE_2_FOOTER']['VALUE'])): ?>
@@ -90,6 +86,10 @@ $feedback = \dnext\Models\Feedback\Settings::instance()->getFirstElement();
                 <?php endif; ?>
             </div>
         </div>
+        <div class="flex-col md-24 footer__warning">
+            <?= $footer['TEXT_LINK_CONTRA_FOOTER']['VALUE'] ?>
+            <!--<img src="/local/templates/meladapt/assets/images/warning.png" alt="">-->
+        </div>
         <div class="footer__bottom">
             <div class="footer__politics" >
                 <?= $footer['TEXT_COPYRIGHT_1_FOOTER']['VALUE'] ?>
@@ -98,7 +98,7 @@ $feedback = \dnext\Models\Feedback\Settings::instance()->getFirstElement();
                 </a>
             </div>
             <a href="/consent/" class="footer__link link" target="_blank"
-               rel="noopener"><?= $footer['TEXT_PERSONAL_DATA_FOOTER']['VALUE'] ?></a>
+               rel="noopener"><span><?= $footer['TEXT_PERSONAL_DATA_FOOTER']['VALUE'] ?></span></a>
             <div class="footer__dnext">
                 Разработка сайта — <a href="https://dnext.ru/" class="link" target="_blank" rel="noopener">
                     Next </a>
